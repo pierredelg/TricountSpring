@@ -16,24 +16,20 @@ public class Evenement implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="id_evenement")
 	private Integer idEvenement;
 
 	private String description;
 
 	private String titre;
 
-	//bi-directional many-to-one association to Ecriture
 	@OneToMany(mappedBy="evenement")
 	private List<Ecriture> ecritures;
 
-	//bi-directional many-to-one association to Participant
+	//Créateur
 	@ManyToOne
-	@JoinColumn(name="id_participants")
 	private Participant participant;
 
-	//bi-directional many-to-many association to Participant
-	@ManyToMany(mappedBy="evenements2")
+	@ManyToMany(mappedBy= "evenementsParticipes")
 	private List<Participant> participants;
 
 	public Evenement() {
@@ -69,20 +65,6 @@ public class Evenement implements Serializable {
 
 	public void setEcritures(List<Ecriture> ecritures) {
 		this.ecritures = ecritures;
-	}
-
-	public Ecriture addEcriture(Ecriture ecriture) {
-		getEcritures().add(ecriture);
-		ecriture.setEvenement(this);
-
-		return ecriture;
-	}
-
-	public Ecriture removeEcriture(Ecriture ecriture) {
-		getEcritures().remove(ecriture);
-		ecriture.setEvenement(null);
-
-		return ecriture;
 	}
 
 	public Participant getParticipant() {

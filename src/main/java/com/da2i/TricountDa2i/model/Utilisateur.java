@@ -16,23 +16,15 @@ public class Utilisateur implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="id_utilisateur")
 	private Integer idUtilisateur;
 
 	private String email;
 
-	@Column(name="mot_de_passe")
 	private String motDePasse;
 
 	private String nom;
 
-	//bi-directional many-to-one association to Participant
-	@OneToMany(mappedBy="utilisateur")
-	private List<Participant> participants;
-
-	//bi-directional many-to-one association to Participant
-	@ManyToOne
-	@JoinColumn(name="id_participants")
+	@OneToOne
 	private Participant participant;
 
 	public Utilisateur() {
@@ -68,28 +60,6 @@ public class Utilisateur implements Serializable {
 
 	public void setNom(String nom) {
 		this.nom = nom;
-	}
-
-	public List<Participant> getParticipants() {
-		return this.participants;
-	}
-
-	public void setParticipants(List<Participant> participants) {
-		this.participants = participants;
-	}
-
-	public Participant addParticipant(Participant participant) {
-		getParticipants().add(participant);
-		participant.setUtilisateur(this);
-
-		return participant;
-	}
-
-	public Participant removeParticipant(Participant participant) {
-		getParticipants().remove(participant);
-		participant.setUtilisateur(null);
-
-		return participant;
 	}
 
 	public Participant getParticipant() {

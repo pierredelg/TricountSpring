@@ -10,20 +10,16 @@ import java.util.List;
  * 
  */
 @Entity
-@Table(name="type_ecriture")
 @NamedQuery(name="TypeEcriture.findAll", query="SELECT t FROM TypeEcriture t")
 public class TypeEcriture implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="id_type_ecriture")
 	private Integer idTypeEcriture;
 
-	@Column(name="nom_du_type")
 	private String nomDuType;
 
-	//bi-directional many-to-one association to Ecriture
 	@OneToMany(mappedBy="typeEcriture")
 	private List<Ecriture> ecritures;
 
@@ -52,20 +48,6 @@ public class TypeEcriture implements Serializable {
 
 	public void setEcritures(List<Ecriture> ecritures) {
 		this.ecritures = ecritures;
-	}
-
-	public Ecriture addEcriture(Ecriture ecriture) {
-		getEcritures().add(ecriture);
-		ecriture.setTypeEcriture(this);
-
-		return ecriture;
-	}
-
-	public Ecriture removeEcriture(Ecriture ecriture) {
-		getEcritures().remove(ecriture);
-		ecriture.setTypeEcriture(null);
-
-		return ecriture;
 	}
 
 }

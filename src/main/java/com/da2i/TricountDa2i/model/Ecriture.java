@@ -2,7 +2,6 @@ package com.da2i.TricountDa2i.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
-import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
@@ -18,7 +17,6 @@ public class Ecriture implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="id_ecriture")
 	private Integer idEcriture;
 
 	@Temporal(TemporalType.DATE)
@@ -26,32 +24,23 @@ public class Ecriture implements Serializable {
 
 	private String libelle;
 
-	private BigDecimal montant;
+	private Double montant;
 
-	private Integer photo;
+	private byte[] photo;
 
-	//bi-directional many-to-one association to Devise
 	@ManyToOne
-	@JoinColumn(name="code")
 	private Devise devise;
 
-	//bi-directional many-to-one association to Evenement
 	@ManyToOne
-	@JoinColumn(name="id_evenement")
 	private Evenement evenement;
 
-	//bi-directional many-to-one association to Participant
 	@ManyToOne
-	@JoinColumn(name="id_participants")
 	private Participant participant;
 
-	//bi-directional many-to-one association to TypeEcriture
 	@ManyToOne
-	@JoinColumn(name="id_type_ecriture")
 	private TypeEcriture typeEcriture;
 
-	//bi-directional many-to-many association to Participant
-	@ManyToMany(mappedBy="ecritures2")
+	@ManyToMany(mappedBy= "ecrituresAPayer")
 	private List<Participant> participants;
 
 	public Ecriture() {
@@ -81,19 +70,19 @@ public class Ecriture implements Serializable {
 		this.libelle = libelle;
 	}
 
-	public BigDecimal getMontant() {
+	public Double getMontant() {
 		return this.montant;
 	}
 
-	public void setMontant(BigDecimal montant) {
+	public void setMontant(Double montant) {
 		this.montant = montant;
 	}
 
-	public Integer getPhoto() {
+	public byte[] getPhoto() {
 		return this.photo;
 	}
 
-	public void setPhoto(Integer photo) {
+	public void setPhoto(byte[] photo) {
 		this.photo = photo;
 	}
 

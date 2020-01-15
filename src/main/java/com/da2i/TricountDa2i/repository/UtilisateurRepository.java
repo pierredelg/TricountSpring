@@ -1,4 +1,10 @@
 package com.da2i.TricountDa2i.repository;
 
-public interface UtilisateurRepository {
+import com.da2i.TricountDa2i.model.Utilisateur;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface UtilisateurRepository extends CrudRepository<Utilisateur,Long> {
+    Utilisateur findByIdUtilisateur(Integer idUtilisateur);
 }

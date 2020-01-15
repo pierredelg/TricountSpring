@@ -18,12 +18,10 @@ public class Devise implements Serializable {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private String code;
 
-	@Column(name="nom_de_devise")
 	private String nomDeDevise;
 
 	private String symbole;
 
-	//bi-directional many-to-one association to Ecriture
 	@OneToMany(mappedBy="devise")
 	private List<Ecriture> ecritures;
 
@@ -60,20 +58,6 @@ public class Devise implements Serializable {
 
 	public void setEcritures(List<Ecriture> ecritures) {
 		this.ecritures = ecritures;
-	}
-
-	public Ecriture addEcriture(Ecriture ecriture) {
-		getEcritures().add(ecriture);
-		ecriture.setDevise(this);
-
-		return ecriture;
-	}
-
-	public Ecriture removeEcriture(Ecriture ecriture) {
-		getEcritures().remove(ecriture);
-		ecriture.setDevise(null);
-
-		return ecriture;
 	}
 
 }
