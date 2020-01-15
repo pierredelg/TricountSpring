@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Optional;
-
 @RestController
 public class UtilisateurController {
 
@@ -20,7 +18,7 @@ public class UtilisateurController {
     @RequestMapping(value = "/utilisateur", method= RequestMethod.GET)
     public ResponseEntity<Utilisateur> getPersonne(){
 
-        Utilisateur utilisateur = utilisateurRepository.findByIdUtilisateur(3);
+        Utilisateur utilisateur = utilisateurRepository.findByIdUtilisateur(1);
 
         if(utilisateur != null){
             return new ResponseEntity<>(utilisateur, HttpStatus.OK);

@@ -1,0 +1,12 @@
+insert into utilisateur(id_utilisateur,email,mot_de_passe,nom) values (1,'utilisateur1@test.fr','test','utilisateur1');
+insert into utilisateur(id_utilisateur,email,mot_de_passe,nom) values (2,'utilisateur2@test.fr','test','utilisateur2');
+insert into utilisateur(id_utilisateur,email,mot_de_passe,nom) values (3,'utilisateur3@test.fr','test','utilisateur3');
+insert into participant(id_participants, surnom) values (1,'surnom 1');
+insert into participant(id_participants, surnom) values (2,'surnom 2');
+insert into participant(id_participants, surnom) values (3,'surnom 3');
+insert into devise(code, nom_de_devise, symbole) VALUES ('EUR','Euros','€');
+insert into devise(code, nom_de_devise, symbole) VALUES ('DOL','Dollars','$');
+insert into devise(code, nom_de_devise, symbole) VALUES ('LIV','Livre sterling','£');
+insert into type_ecriture(id_type_ecriture, nom_du_type) VALUES (1,'Dépense');
+insert into type_ecriture(id_type_ecriture, nom_du_type) VALUES (2,'Rentrée d''argent');
+insert into type_ecriture(id_type_ecriture, nom_du_type) VALUES (3,'Transfert d''argent');
