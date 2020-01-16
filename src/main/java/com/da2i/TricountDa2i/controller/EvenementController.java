@@ -1,4 +1,4 @@
-package com.da2i.TricountDa2i.Controller;
+package com.da2i.TricountDa2i.controller;
 
 import com.da2i.TricountDa2i.model.Evenement;
 import com.da2i.TricountDa2i.repository.EvenementRepository;

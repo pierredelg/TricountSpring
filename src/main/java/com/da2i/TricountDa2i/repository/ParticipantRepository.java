@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ParticipantRepository extends CrudRepository<Participant,Long> {
-    Participant findByIdParticipant(int id);
+    Participant findByIdParticipants(int id);
 }

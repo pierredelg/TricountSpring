@@ -1,4 +1,4 @@
-package com.da2i.TricountDa2i.Controller;
+package com.da2i.TricountDa2i.controller;
 
 import com.da2i.TricountDa2i.model.Participant;
 import com.da2i.TricountDa2i.repository.ParticipantRepository;
@@ -30,7 +30,7 @@ public class ParticipantController {
     @RequestMapping(value ="/{id}", method= RequestMethod.GET)
     public ResponseEntity<Participant> getParticipant(int id){
 
-        Participant participant = participantRepository.findByIdParticipant(id);
+        Participant participant = participantRepository.findByIdParticipants(id);
 
         if(participant != null){
             return new ResponseEntity<>(participant, HttpStatus.OK);
