@@ -10,13 +10,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping(value = "/utilisateur")
 public class UtilisateurController {
 
     @Autowired
     UtilisateurRepository utilisateurRepository;
 
-    @RequestMapping(value = "/utilisateur", method= RequestMethod.GET)
-    public ResponseEntity<Utilisateur> getPersonne(){
+    @RequestMapping(method= RequestMethod.GET)
+    public ResponseEntity<Utilisateur> getAllUsuer(){
 
         Utilisateur utilisateur = utilisateurRepository.findByIdUtilisateur(1);
 
