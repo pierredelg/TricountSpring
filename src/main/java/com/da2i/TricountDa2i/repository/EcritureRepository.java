@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface EcritureRepository extends CrudRepository<Ecriture,Long> {
 
+    Ecriture findByIdEcriture(int id);
 }
