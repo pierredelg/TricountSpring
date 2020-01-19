@@ -1,7 +1,7 @@
-package com.da2i.TricountDa2i.controller;
+package com.da2i.tricountda2i.service;
 
-import com.da2i.TricountDa2i.model.Participant;
-import com.da2i.TricountDa2i.repository.ParticipantRepository;
+import com.da2i.tricountda2i.model.Participant;
+import com.da2i.tricountda2i.repository.ParticipantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/participants")
-public class ParticipantController {
+public class ParticipantService {
 
     @Autowired
     ParticipantRepository participantRepository;
@@ -28,7 +28,7 @@ public class ParticipantController {
     }
 
     @RequestMapping(value ="/{id}", method= RequestMethod.GET)
-    public ResponseEntity<Participant> getParticipant(int id){
+    public ResponseEntity<Participant> getParticipant(Integer id){
 
         Participant participant = participantRepository.findByIdParticipants(id);
 

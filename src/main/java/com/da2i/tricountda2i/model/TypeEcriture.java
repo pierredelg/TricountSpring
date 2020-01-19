@@ -1,4 +1,4 @@
-package com.da2i.TricountDa2i.model;
+package com.da2i.tricountda2i.model;
 
 import java.io.Serializable;
 import javax.persistence.*;

@@ -1,7 +1,7 @@
-package com.da2i.TricountDa2i.controller;
+package com.da2i.tricountda2i.service;
 
-import com.da2i.TricountDa2i.model.Ecriture;
-import com.da2i.TricountDa2i.repository.EcritureRepository;
+import com.da2i.tricountda2i.model.Ecriture;
+import com.da2i.tricountda2i.repository.EcritureRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/ecritures")
-public class EcritureController {
+public class EcritureService {
 
     @Autowired
     EcritureRepository ecritureRepository;
@@ -27,7 +27,7 @@ public class EcritureController {
     }
 
     @RequestMapping(value ="/{id}", method= RequestMethod.GET)
-    public ResponseEntity<Ecriture> getWriting(int id){
+    public ResponseEntity<Ecriture> getWriting(Integer id){
 
         Ecriture ecriture = ecritureRepository.findByIdEcriture(id);
 

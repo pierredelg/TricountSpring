@@ -1,4 +1,4 @@
-package com.da2i.TricountDa2i;
+package com.da2i.tricountda2i;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

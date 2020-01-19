@@ -1,7 +1,7 @@
-package com.da2i.TricountDa2i.controller;
+package com.da2i.tricountda2i.service;
 
-import com.da2i.TricountDa2i.model.Devise;
-import com.da2i.TricountDa2i.repository.DeviseRepository;
+import com.da2i.tricountda2i.model.Devise;
+import com.da2i.tricountda2i.repository.DeviseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/devises")
-public class DeviseController {
+public class DeviseService {
 
     @Autowired
     DeviseRepository deviseRepository;
