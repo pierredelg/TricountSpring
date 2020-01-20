@@ -15,7 +15,6 @@ public class Participant implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer idParticipants;
 
 	private String surnom;

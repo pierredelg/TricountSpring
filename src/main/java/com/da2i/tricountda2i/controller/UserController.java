@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@Api(description = "Service permettant de récupérer, ajouter, modifier ou supprimer un utilisateur.")
+@Api(description = "Permet de récupérer, ajouter, modifier ou supprimer un utilisateur.")
 public class UserController {
 
     @Autowired
     UserService userService;
 
-    @GetMapping("/utilisateurs")
+    @GetMapping("/users")
     @ApiOperation(value = "Permet de récupérer la liste de tous les utilisateurs inscrits")
     public ResponseEntity<List<Utilisateur>> getAllUser(){
 
@@ -27,9 +27,9 @@ public class UserController {
         return new ResponseEntity<>(utilisateurs, HttpStatus.OK);
     }
 
-    @GetMapping(value ="/utilisateurs/{id}")
+    @GetMapping(value ="/users/{id}")
     @ApiOperation(value = "Permet de récupérer un utilisateur avec son identifiant")
-    public ResponseEntity<Utilisateur> getuser(Integer id){
+    public ResponseEntity<Utilisateur> getuser(@PathVariable Integer id){
 
         Utilisateur utilisateur = userService.getuser(id);
 
@@ -39,9 +39,9 @@ public class UserController {
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
-    @PostMapping
+    @PostMapping("/users")
     @ApiOperation(value = "Permet d'ajouter un utilisateur")
-    public ResponseEntity<Utilisateur> addUser(Utilisateur utilisateur){
+    public ResponseEntity<Utilisateur> addUser(@RequestBody Utilisateur utilisateur){
         if (utilisateur != null){
             userService.addUser(utilisateur);
             return new ResponseEntity<>(utilisateur,HttpStatus.CREATED);
@@ -49,9 +49,9 @@ public class UserController {
         return new ResponseEntity<>(utilisateur,HttpStatus.BAD_REQUEST);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/users")
     @ApiOperation(value = "Permet de supprimer un utilisateur")
-    public ResponseEntity<Utilisateur> deleteUser(Utilisateur utilisateur){
+    public ResponseEntity<Utilisateur> deleteUser(@RequestBody Utilisateur utilisateur){
         if(utilisateur != null){
             userService.deleteUser(utilisateur);
             return new ResponseEntity<>(utilisateur,HttpStatus.OK);
@@ -59,9 +59,9 @@ public class UserController {
         return new ResponseEntity<>(utilisateur,HttpStatus.BAD_REQUEST);
     }
 
-    @PutMapping
+    @PutMapping("/users")
     @ApiOperation(value = "Permet de modifier un utilisateur")
-    public ResponseEntity<Utilisateur> updateUser(Utilisateur utilisateur){
+    public ResponseEntity<Utilisateur> updateUser(@RequestBody Utilisateur utilisateur){
 
         if(utilisateur != null){
             userService.updateUser(utilisateur);

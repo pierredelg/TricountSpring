@@ -15,7 +15,6 @@ public class TypeEcriture implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer idTypeEcriture;
 
 	private String nomDuType;
