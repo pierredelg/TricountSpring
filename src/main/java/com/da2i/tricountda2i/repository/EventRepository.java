@@ -5,6 +5,6 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface EvenementRepository extends CrudRepository<Evenement,Long>{
+public interface EventRepository extends CrudRepository<Evenement,Long>{
     Evenement findByIdEvenement(int id);
 }

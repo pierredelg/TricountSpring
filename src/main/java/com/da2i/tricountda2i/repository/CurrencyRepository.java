@@ -5,7 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface DeviseRepository extends CrudRepository<Devise, Long> {
+public interface CurrencyRepository extends CrudRepository<Devise, Long> {
 
     Devise findByCode(String code);
 }

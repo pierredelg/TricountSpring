@@ -556,3 +556,23 @@ drop table if exists participant_evenements_participes cascade
 drop table if exists type_ecriture cascade
 drop table if exists utilisateur cascade
 drop sequence if exists hibernate_sequence
+alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
+alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
+alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
+alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
+alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
+alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
+alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
+alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
+alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
+alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
+alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
+drop table if exists devise cascade
+drop table if exists ecriture cascade
+drop table if exists evenement cascade
+drop table if exists participant cascade
+drop table if exists participant_ecrituresapayer cascade
+drop table if exists participant_evenements_participes cascade
+drop table if exists type_ecriture cascade
+drop table if exists utilisateur cascade
+drop sequence if exists hibernate_sequence

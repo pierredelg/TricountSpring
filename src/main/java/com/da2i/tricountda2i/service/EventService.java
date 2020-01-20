@@ -1,68 +1,41 @@
 package com.da2i.tricountda2i.service;
 
 import com.da2i.tricountda2i.model.Evenement;
-import com.da2i.tricountda2i.repository.EvenementRepository;
+import com.da2i.tricountda2i.repository.EventRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@RestController
-@RequestMapping(value = "/evenements")
+@Service
 public class EventService {
 
     @Autowired
-    EvenementRepository evenementRepository;
+    EventRepository eventRepository;
 
-    @RequestMapping(method= RequestMethod.GET)
-    public ResponseEntity<List<Evenement>> getAllEvenement(){
+    public List<Evenement> getAllEvenement(){
 
-        List<Evenement> evenements = (List<Evenement>) evenementRepository.findAll();
-
-        return new ResponseEntity<>(evenements, HttpStatus.OK);
+        return (List<Evenement>)  eventRepository.findAll();
     }
 
-    @RequestMapping(value ="/{id}", method= RequestMethod.GET)
-    public ResponseEntity<Evenement> getEvenement(Integer id){
+    public Evenement getEvenement(Integer id){
 
-        Evenement evenement = evenementRepository.findByIdEvenement(id);
-
-        if(evenement != null){
-            return new ResponseEntity<>(evenement, HttpStatus.OK);
-        }
-
-        return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        return eventRepository.findByIdEvenement(id);
     }
 
-    @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<Evenement> addEvenement(Evenement evenement){
-        if (evenement != null){
-            evenementRepository.save(evenement);
-            return new ResponseEntity<>(evenement,HttpStatus.CREATED);
-        }
-        return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
+    public Evenement addEvenement(Evenement evenement){
+
+        return eventRepository.save(evenement);
     }
 
-    @RequestMapping(method = RequestMethod.DELETE)
-    public ResponseEntity<Evenement> deleteEvenement(Evenement evenement){
-        if(evenement != null){
-            evenementRepository.delete(evenement);
-            return new ResponseEntity<>(evenement,HttpStatus.OK);
-        }
-        return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
+    public Evenement deleteEvenement(Evenement evenement){
+
+        eventRepository.delete(evenement);
+        return evenement;
     }
 
-    @RequestMapping(method = RequestMethod.PUT)
-    public ResponseEntity<Evenement> updateEvenement(Evenement evenement){
+    public Evenement updateEvenement(Evenement evenement){
 
-        if(evenement != null){
-            evenementRepository.save(evenement);
-            return new ResponseEntity<>(evenement,HttpStatus.OK);
-        }
-        return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
+        return eventRepository.save(evenement);
     }
 }

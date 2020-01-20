@@ -1,72 +1,37 @@
 package com.da2i.tricountda2i.service;
 
 import com.da2i.tricountda2i.model.Utilisateur;
-import com.da2i.tricountda2i.repository.UtilisateurRepository;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+import com.da2i.tricountda2i.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@RestController
-@Api(description = "Service permettant de récupérer, ajouter, modifier ou supprimer un utilisateur.")
+@Service
 public class UserService {
 
     @Autowired
-    UtilisateurRepository utilisateurRepository;
+    UserRepository userRepository;
 
-    @GetMapping("/utilisateurs")
-    @ApiOperation(value = "Permet de récupérer la liste de tous les utilisateurs inscrits")
-    public ResponseEntity<List<Utilisateur>> getAllUser(){
+    public List<Utilisateur> getAllUser(){
 
-        List<Utilisateur> utilisateurs = (List<Utilisateur>) utilisateurRepository.findAll();
-
-        return new ResponseEntity<>(utilisateurs, HttpStatus.OK);
+        return (List<Utilisateur>) userRepository.findAll();
     }
 
-    @GetMapping(value ="/utilisateurs/{id}")
-    @ApiOperation(value = "Permet de récupérer un utilisateur avec son identifiant")
-    public ResponseEntity<Utilisateur> getuser(Integer id){
-
-        Utilisateur utilisateur = utilisateurRepository.findByIdUtilisateur(id);
-
-        if(utilisateur != null){
-            return new ResponseEntity<>(utilisateur, HttpStatus.OK);
-        }
-        return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+    public Utilisateur getuser(Integer id){
+        return userRepository.findByIdUtilisateur(id);
     }
 
-    @PostMapping
-    @ApiOperation(value = "Permet d'ajouter un utilisateur")
-    public ResponseEntity<Utilisateur> addUser(Utilisateur utilisateur){
-        if (utilisateur != null){
-            utilisateurRepository.save(utilisateur);
-            return new ResponseEntity<>(utilisateur,HttpStatus.CREATED);
-        }
-        return new ResponseEntity<>(utilisateur,HttpStatus.BAD_REQUEST);
+    public Utilisateur addUser(Utilisateur utilisateur){
+        return userRepository.save(utilisateur);
     }
 
-    @DeleteMapping
-    @ApiOperation(value = "Permet de supprimer un utilisateur")
-    public ResponseEntity<Utilisateur> deleteUser(Utilisateur utilisateur){
-        if(utilisateur != null){
-            utilisateurRepository.delete(utilisateur);
-            return new ResponseEntity<>(utilisateur,HttpStatus.OK);
-        }
-        return new ResponseEntity<>(utilisateur,HttpStatus.BAD_REQUEST);
+    public Utilisateur deleteUser(Utilisateur utilisateur){
+        userRepository.delete(utilisateur);
+        return utilisateur;
     }
 
-    @PutMapping
-    @ApiOperation(value = "Permet de modifier un utilisateur")
-    public ResponseEntity<Utilisateur> updateUser(Utilisateur utilisateur){
-
-        if(utilisateur != null){
-            utilisateurRepository.save(utilisateur);
-            return new ResponseEntity<>(utilisateur,HttpStatus.OK);
-        }
-        return new ResponseEntity<>(utilisateur,HttpStatus.BAD_REQUEST);
+    public Utilisateur updateUser(Utilisateur utilisateur){
+        return  userRepository.save(utilisateur);
     }
 }

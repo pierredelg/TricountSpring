@@ -1,37 +1,38 @@
-package com.da2i.tricountda2i.service;
+package com.da2i.tricountda2i.controller;
 
 import com.da2i.tricountda2i.model.TypeEcriture;
-import com.da2i.tricountda2i.repository.TypeEcritureRepository;
+import com.da2i.tricountda2i.service.WritingTypeService;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/typeEcriture")
-public class TypeEcritureService {
+@RequestMapping(value = "/writingType")
+@Api(description = "Permet de récupérer, ajouter, modifier ou supprimer un type d'écriture.")
+public class WrintingTypeController {
 
     @Autowired
-    TypeEcritureRepository typeEcritureRepository;
+    WritingTypeService writingTypeService;
 
-    @RequestMapping(method= RequestMethod.GET)
+    @GetMapping
+    @ApiOperation(value = "Permet de récupérer la liste de tous les types d'écritures")
     public ResponseEntity<List<TypeEcriture>> getAllWritingType(){
 
-        List<TypeEcriture> typeEcritures = (List<TypeEcriture>) typeEcritureRepository.findAll();
+        List<TypeEcriture> typeEcritures = writingTypeService.getAllWritingType();
 
         return new ResponseEntity<>(typeEcritures, HttpStatus.OK);
     }
 
-    @RequestMapping(value ="/{id}", method= RequestMethod.GET)
+    @GetMapping(value ="/{id}")
     @ApiOperation(value = "Permet de récupérer un type d'écriture avec son identifiant")
     public ResponseEntity<TypeEcriture> getWritingType(Integer id){
 
-        TypeEcriture typeEcriture = typeEcritureRepository.findByIdTypeEcriture(id);
+        TypeEcriture typeEcriture = writingTypeService.getWritingType(id);
 
         if(typeEcriture != null){
             return new ResponseEntity<>(typeEcriture, HttpStatus.OK);
@@ -39,32 +40,32 @@ public class TypeEcritureService {
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
-    @RequestMapping(method = RequestMethod.POST)
+    @PostMapping
     @ApiOperation(value = "Permet d'ajouter un type d'écriture")
     public ResponseEntity<TypeEcriture> addWritingType(TypeEcriture typeEcriture){
         if (typeEcriture != null){
-            typeEcritureRepository.save(typeEcriture);
+            writingTypeService.addWritingType(typeEcriture);
             return new ResponseEntity<>(typeEcriture,HttpStatus.CREATED);
         }
         return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
     }
 
-    @RequestMapping(method = RequestMethod.DELETE)
+    @DeleteMapping
     @ApiOperation(value = "Permet de supprimer un type d'écriture")
     public ResponseEntity<TypeEcriture> deleteWritingType(TypeEcriture typeEcriture){
         if(typeEcriture != null){
-            typeEcritureRepository.delete(typeEcriture);
+            writingTypeService.deleteWritingType(typeEcriture);
             return new ResponseEntity<>(typeEcriture,HttpStatus.OK);
         }
         return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
     }
 
-    @RequestMapping(method = RequestMethod.PUT)
+    @PutMapping
     @ApiOperation(value = "Permet de modifier un type d'écriture")
     public ResponseEntity<TypeEcriture> updateWritingType(TypeEcriture typeEcriture){
 
         if(typeEcriture != null){
-            typeEcritureRepository.save(typeEcriture);
+            writingTypeService.updateWritingType(typeEcriture);
             return new ResponseEntity<>(typeEcriture,HttpStatus.OK);
         }
         return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
