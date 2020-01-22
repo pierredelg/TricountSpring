@@ -1,5 +1,7 @@
 package com.da2i.tricountda2i.model;
 
+import io.swagger.annotations.ApiModel;
+
 import java.io.Serializable;
 import javax.persistence.*;
 import java.util.List;
@@ -11,6 +13,7 @@ import java.util.List;
  */
 @Entity
 @NamedQuery(name="Evenement.findAll", query="SELECT e FROM Evenement e")
+@ApiModel(description ="Informations concernant un événement")
 public class Evenement implements Serializable {
 	private static final long serialVersionUID = 1L;
 

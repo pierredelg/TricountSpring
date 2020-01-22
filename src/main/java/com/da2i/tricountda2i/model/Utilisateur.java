@@ -1,5 +1,7 @@
 package com.da2i.tricountda2i.model;
 
+import io.swagger.annotations.ApiModel;
+
 import java.io.Serializable;
 import javax.persistence.*;
 
@@ -10,6 +12,7 @@ import javax.persistence.*;
  */
 @Entity
 @NamedQuery(name="Utilisateur.findAll", query="SELECT u FROM Utilisateur u")
+@ApiModel(description ="Informations concernant un utilisateur")
 public class Utilisateur implements Serializable {
 	private static final long serialVersionUID = 1L;
 

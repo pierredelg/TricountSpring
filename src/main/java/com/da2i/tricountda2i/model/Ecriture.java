@@ -1,5 +1,7 @@
 package com.da2i.tricountda2i.model;
 
+import io.swagger.annotations.ApiModel;
+
 import java.io.Serializable;
 import javax.persistence.*;
 import java.util.Date;
@@ -12,6 +14,7 @@ import java.util.List;
  */
 @Entity
 @NamedQuery(name="Ecriture.findAll", query="SELECT e FROM Ecriture e")
+@ApiModel(description ="Informations concernant une écriture")
 public class Ecriture implements Serializable {
 	private static final long serialVersionUID = 1L;
 

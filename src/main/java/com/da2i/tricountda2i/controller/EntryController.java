@@ -12,14 +12,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/entries")
-@Api(description = "Permet de récupérer, ajouter, modifier ou supprimer une écriture.")
+@Api(tags = {"Gestion des écritures"})
 public class EntryController {
 
     @Autowired
     EntryService entryService;
 
-    @GetMapping
+    @GetMapping("/entries")
     @ApiOperation(value = "Permet de récupérer la liste de toutes les écritures")
     public ResponseEntity<List<Ecriture>> getAllWriting(){
 
@@ -28,9 +27,9 @@ public class EntryController {
         return new ResponseEntity<>(ecritures, HttpStatus.OK);
     }
 
-    @GetMapping(value ="/{id}")
+    @GetMapping(value ="/entries/{id}")
     @ApiOperation(value = "Permet de récupérer une écriture à partir de son id")
-    public ResponseEntity<Ecriture> getWriting(Integer id){
+    public ResponseEntity<Ecriture> getWriting(@PathVariable Integer id){
 
         Ecriture ecriture = entryService.getWriting(id);
 
@@ -40,9 +39,9 @@ public class EntryController {
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
-    @PostMapping
+    @PostMapping("/entries")
     @ApiOperation(value = "Permet d'ajouter une écriture")
-    public ResponseEntity<Ecriture> addWriting(Ecriture ecriture){
+    public ResponseEntity<Ecriture> addWriting(@RequestBody Ecriture ecriture){
         if (ecriture != null){
             entryService.addWriting(ecriture);
             return new ResponseEntity<>(ecriture,HttpStatus.CREATED);
@@ -50,9 +49,9 @@ public class EntryController {
         return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/entries")
     @ApiOperation(value = "Permet de supprimer une écriture")
-    public ResponseEntity<Ecriture> deleteWriting(Ecriture ecriture){
+    public ResponseEntity<Ecriture> deleteWriting(@RequestBody Ecriture ecriture){
         if(ecriture != null){
             entryService.deleteWriting(ecriture);
             return new ResponseEntity<>(ecriture,HttpStatus.OK);
@@ -60,9 +59,9 @@ public class EntryController {
         return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
     }
 
-    @PutMapping
+    @PutMapping("/entries")
     @ApiOperation(value = "Permet de modifier une écriture")
-    public ResponseEntity<Ecriture> updateWriting(Ecriture ecriture){
+    public ResponseEntity<Ecriture> updateWriting(@RequestBody Ecriture ecriture){
 
         if(ecriture != null){
             entryService.updateWriting(ecriture);

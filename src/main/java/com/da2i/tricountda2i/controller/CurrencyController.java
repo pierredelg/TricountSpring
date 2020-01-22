@@ -12,15 +12,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/currency")
-@Api(description = "Permet de récupérer, ajouter, modifier ou supprimer une devise.")
+@Api(tags = {"Gestion des devises"})
 public class CurrencyController {
 
     @Autowired
     CurrencyService currencyService;
 
-    @GetMapping
-    @ApiOperation(value = "Permet de récupérer la liste de toutes les devises")
+    @GetMapping("/currency")
+    @ApiOperation(value = "Récupére la liste de toutes les devises")
     public ResponseEntity<List<Devise>> getAllCurrency(){
 
         List<Devise> devises = currencyService.getAllCurrency();
@@ -28,9 +27,9 @@ public class CurrencyController {
         return new ResponseEntity<>(devises, HttpStatus.OK);
     }
 
-    @GetMapping(value ="/{id}")
-    @ApiOperation(value = "Permet de récupérer une devise à partir de son code")
-    public ResponseEntity<Devise> getCurrency(String code){
+    @GetMapping(value ="/currency/{id}")
+    @ApiOperation(value = "Récupére une devise à partir de son code")
+    public ResponseEntity<Devise> getCurrency(@PathVariable String code){
 
         Devise devise = currencyService.getCurrency(code);
 
@@ -40,9 +39,9 @@ public class CurrencyController {
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
-    @PostMapping
-    @ApiOperation(value = "Permet d'ajouter une devise")
-    public ResponseEntity<Devise> addCurrency(Devise devise){
+    @PostMapping("/currency")
+    @ApiOperation(value = "Ajoute une devise")
+    public ResponseEntity<Devise> addCurrency(@RequestBody Devise devise){
         if (devise != null){
             currencyService.addCurrency(devise);
             return new ResponseEntity<>(devise,HttpStatus.CREATED);
@@ -50,9 +49,9 @@ public class CurrencyController {
         return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
     }
 
-    @DeleteMapping
-    @ApiOperation(value = "Permet de supprimer une devise")
-    public ResponseEntity<Devise> deleteCurrency(Devise devise){
+    @DeleteMapping("/currency")
+    @ApiOperation(value = "Supprime une devise")
+    public ResponseEntity<Devise> deleteCurrency(@RequestBody Devise devise){
         if(devise != null){
             currencyService.deleteCurrency(devise);
             return new ResponseEntity<>(devise,HttpStatus.OK);
@@ -60,9 +59,9 @@ public class CurrencyController {
         return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
     }
 
-    @PutMapping
-    @ApiOperation(value = "Permet de modifier une devise")
-    public ResponseEntity<Devise> updateCurrency(Devise devise){
+    @PutMapping("/currency")
+    @ApiOperation(value = "Modifie une devise")
+    public ResponseEntity<Devise> updateCurrency(@RequestBody Devise devise){
 
         if(devise != null){
             currencyService.updateCurrency(devise);

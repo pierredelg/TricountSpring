@@ -23,6 +23,7 @@ public class UserService {
     }
 
     public Utilisateur addUser(Utilisateur utilisateur){
+
         return userRepository.save(utilisateur);
     }
 
@@ -34,4 +35,5 @@ public class UserService {
     public Utilisateur updateUser(Utilisateur utilisateur){
         return  userRepository.save(utilisateur);
     }
+
 }

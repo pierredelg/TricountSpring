@@ -12,15 +12,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/participants")
-@Api(description = "Permet de récupérer, ajouter, modifier ou supprimer un participant.")
+@Api(tags = {"Gestion des participants"})
 public class ParticipantController {
 
     @Autowired
     ParticipantService participantService;
 
-    @GetMapping
-    @ApiOperation(value = "Permet de récupérer la liste de tous les participants")
+    @GetMapping("/participants")
+    @ApiOperation(value = "Récupére la liste de tous les participants")
     public ResponseEntity<List<Participant>> getAllParticipant(){
 
         List<Participant> participants = participantService.getAllParticipant();
@@ -29,9 +28,9 @@ public class ParticipantController {
 
     }
 
-    @GetMapping(value ="/{id}")
-    @ApiOperation(value = "Permet de récupérer un participant à partir de son id")
-    public ResponseEntity<Participant> getParticipant(Integer id){
+    @GetMapping(value ="/participants/{id}")
+    @ApiOperation(value = "Récupére un participant à partir de son id")
+    public ResponseEntity<Participant> getParticipant(@PathVariable Integer id){
 
         Participant participant = participantService.getParticipant(id);
 
@@ -43,9 +42,9 @@ public class ParticipantController {
     }
 
 
-    @PostMapping
-    @ApiOperation(value = "Permet d'ajouter un participant")
-    public ResponseEntity<Participant> addParticipant(Participant participant){
+    @PostMapping("/participants")
+    @ApiOperation(value = "Ajoute un participant")
+    public ResponseEntity<Participant> addParticipant(@RequestBody Participant participant){
         if (participant != null){
             participantService.addParticipant(participant);
             return new ResponseEntity<>(participant,HttpStatus.CREATED);
@@ -53,9 +52,9 @@ public class ParticipantController {
         return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
     }
 
-    @DeleteMapping
-    @ApiOperation(value = "Permet de supprimer un participant")
-    public ResponseEntity<Participant> deleteParticipant(Participant participant){
+    @DeleteMapping("/participants")
+    @ApiOperation(value = "Supprime un participant")
+    public ResponseEntity<Participant> deleteParticipant(@RequestBody Participant participant){
         if(participant != null){
             participantService.deleteParticipant(participant);
             return new ResponseEntity<>(participant,HttpStatus.OK);
@@ -63,9 +62,9 @@ public class ParticipantController {
         return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
     }
 
-    @PutMapping
-    @ApiOperation(value = "Permet de modifier un participant")
-    public ResponseEntity<Participant> updateParticipant(Participant participant){
+    @PutMapping("/participants")
+    @ApiOperation(value = "Modifie un participant")
+    public ResponseEntity<Participant> updateParticipant(@RequestBody Participant participant){
 
         if(participant != null){
             participantService.updateParticipant(participant);

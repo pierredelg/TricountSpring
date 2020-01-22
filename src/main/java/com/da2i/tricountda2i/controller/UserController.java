@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@Api(description = "Permet de récupérer, ajouter, modifier ou supprimer un utilisateur.")
+@Api(tags = {"Gestion des utilisateurs"})
 public class UserController {
 
     @Autowired
     UserService userService;
 
     @GetMapping("/users")
-    @ApiOperation(value = "Permet de récupérer la liste de tous les utilisateurs inscrits")
+    @ApiOperation(value = "Récupére la liste de tous les utilisateurs inscrits")
     public ResponseEntity<List<Utilisateur>> getAllUser(){
 
         List<Utilisateur> utilisateurs = userService.getAllUser();
@@ -28,7 +28,7 @@ public class UserController {
     }
 
     @GetMapping(value ="/users/{id}")
-    @ApiOperation(value = "Permet de récupérer un utilisateur avec son identifiant")
+    @ApiOperation(value = "Récupére un utilisateur avec son identifiant")
     public ResponseEntity<Utilisateur> getuser(@PathVariable Integer id){
 
         Utilisateur utilisateur = userService.getuser(id);
@@ -40,7 +40,7 @@ public class UserController {
     }
 
     @PostMapping("/users")
-    @ApiOperation(value = "Permet d'ajouter un utilisateur")
+    @ApiOperation(value = "Ajoute un utilisateur")
     public ResponseEntity<Utilisateur> addUser(@RequestBody Utilisateur utilisateur){
         if (utilisateur != null){
             userService.addUser(utilisateur);
@@ -50,7 +50,7 @@ public class UserController {
     }
 
     @DeleteMapping("/users")
-    @ApiOperation(value = "Permet de supprimer un utilisateur")
+    @ApiOperation(value = "Supprime un utilisateur")
     public ResponseEntity<Utilisateur> deleteUser(@RequestBody Utilisateur utilisateur){
         if(utilisateur != null){
             userService.deleteUser(utilisateur);
@@ -60,7 +60,7 @@ public class UserController {
     }
 
     @PutMapping("/users")
-    @ApiOperation(value = "Permet de modifier un utilisateur")
+    @ApiOperation(value = "Modifie un utilisateur")
     public ResponseEntity<Utilisateur> updateUser(@RequestBody Utilisateur utilisateur){
 
         if(utilisateur != null){
