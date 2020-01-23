@@ -1,48 +1,30 @@
 package com.da2i.tricountda2i.controller;
 
-import javax.mail.internet.MimeMessage;
-
+import com.da2i.tricountda2i.model.Utilisateur;
+import com.da2i.tricountda2i.service.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.MimeMessageHelper;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class EmailController {
 
     @Autowired
-    private JavaMailSender sender;
+    EmailService emailService;
 
-    @RequestMapping("/sendemail")
-    @ResponseBody
-    String home() {
-        try {
-            sendEmail();
-            return "Email Sent!";
-        } catch (Exception ex) {
-            return "Error in sending email: " + ex;
+    @PostMapping("/sendWelcomeEmail")
+    public ResponseEntity<String> sendWelcomeEmail(@RequestBody Utilisateur utilisateur) {
+        if(utilisateur != null) {
+            try {
+                emailService.sendWelcomeEmail(utilisateur);
+                return new ResponseEntity<>(null, HttpStatus.OK);
+            } catch (Exception ex) {
+                return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+            }
         }
-    }
-
-    private void sendEmail() throws Exception {
-        MimeMessage message = sender.createMimeMessage();
-
-        // Enable the multipart flag!
-        MimeMessageHelper helper = new MimeMessageHelper(message, true);
-
-        helper.setTo("pierredelgrange@hotmail.fr");
-        helper.setText("<html>" +
-                "<body>Here is a cat picture! <img src='cid:id101'/>" +
-                "<body>" +
-                "</html>", true);
-        helper.setSubject("Test email");
-
-        ClassPathResource file = new ClassPathResource("logo.png");
-        helper.addInline("id101", file);
-
-        sender.send(message);
+        return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
     }
 }
