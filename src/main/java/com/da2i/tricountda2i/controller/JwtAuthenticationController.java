@@ -3,6 +3,7 @@ package com.da2i.tricountda2i.controller;
 import com.da2i.tricountda2i.config.JwtTokenUtil;
 import com.da2i.tricountda2i.model.JwtRequest;
 import com.da2i.tricountda2i.model.JwtResponse;
+import com.da2i.tricountda2i.model.Utilisateur;
 import com.da2i.tricountda2i.service.JwtUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -48,5 +49,11 @@ public class JwtAuthenticationController {
         } catch (BadCredentialsException e) {
             throw new Exception("INVALID_CREDENTIALS", e);
         }
+    }
+
+    //TODO remplacer request body par un USerDTO
+    @PostMapping(value = "/register")
+    public ResponseEntity<?> saveUser(@RequestBody Utilisateur user) {
+        return ResponseEntity.ok(userDetailsService.save(user));
     }
 }
