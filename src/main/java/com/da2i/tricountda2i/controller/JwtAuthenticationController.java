@@ -5,7 +5,9 @@ import com.da2i.tricountda2i.model.JwtRequest;
 import com.da2i.tricountda2i.model.JwtResponse;
 import com.da2i.tricountda2i.model.Utilisateur;
 import com.da2i.tricountda2i.service.JwtUserDetailsService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -27,6 +29,16 @@ public class JwtAuthenticationController {
 
     @Autowired
     private JwtUserDetailsService userDetailsService;
+
+    @ApiOperation(value = "Récupere les méthodes permises pour l'authentification")
+    @RequestMapping(value="/authenticate", method = RequestMethod.OPTIONS)
+    ResponseEntity<?> collectionOptions()
+    {
+        return ResponseEntity
+                .ok()
+                .allow(HttpMethod.GET, HttpMethod.OPTIONS)
+                .build();
+    }
 
     @PostMapping(value = "/authenticate")
     public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest) throws Exception {
@@ -51,7 +63,17 @@ public class JwtAuthenticationController {
         }
     }
 
-    //TODO remplacer request body par un USerDTO
+    @ApiOperation(value = "Récupere les méthodes permises pour l'enregistrement")
+    @RequestMapping(value="/register", method = RequestMethod.OPTIONS)
+    ResponseEntity<?> collectionOptionsRegister()
+    {
+        return ResponseEntity
+                .ok()
+                .allow(HttpMethod.POST, HttpMethod.OPTIONS)
+                .build();
+    }
+
+
     @PostMapping(value = "/register")
     public ResponseEntity<?> saveUser(@RequestBody Utilisateur user) {
         return ResponseEntity.ok(userDetailsService.save(user));

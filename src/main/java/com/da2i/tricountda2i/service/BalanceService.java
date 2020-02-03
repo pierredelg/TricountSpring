@@ -8,6 +8,7 @@ import com.da2i.tricountda2i.model.Participant;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 @Service
@@ -55,7 +56,24 @@ public class BalanceService {
 
         //On cherche à mettre chaque personne à zero
         //On parcourt la map
-        for (Map.Entry<Participant,Double> entry : map.entrySet()){
+        Iterator<Map.Entry<Participant,Double>> entries = map.entrySet().iterator();
+        while ( entries.hasNext()) {
+
+            //On garde l'entrée
+            Map.Entry<Participant,Double> entryBase = entries.next();
+
+            //Si l'entrée doit de l'argent
+            if(entryBase.getValue() > 0 ) {
+
+                //On parcourt la liste
+                for (Map.Entry<Participant, Double> entryTest : map.entrySet()) {
+
+
+                    if (!entryTest.equals(entryBase) && entryTest.getValue() < entryBase.getValue()) {
+
+                    }
+                }
+            }
 
         }
 

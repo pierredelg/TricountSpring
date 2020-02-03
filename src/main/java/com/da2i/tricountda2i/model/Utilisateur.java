@@ -17,13 +17,14 @@ public class Utilisateur implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer idUtilisateur;
+
+	private String nom;
 
 	private String email;
 
 	private String motDePasse;
-
-	private String nom;
 
 	@OneToOne
 	private Participant participant;

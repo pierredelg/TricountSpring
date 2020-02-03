@@ -5,6 +5,7 @@ import com.da2i.tricountda2i.service.EventService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +18,16 @@ public class EventController {
 
     @Autowired
     EventService eventService;
+
+    @ApiOperation(value = "Récupere les méthodes permises pour les événements")
+    @RequestMapping(value="/events", method = RequestMethod.OPTIONS)
+    ResponseEntity<?> collectionOptions()
+    {
+        return ResponseEntity
+                .ok()
+                .allow(HttpMethod.GET,HttpMethod.DELETE,HttpMethod.POST,HttpMethod.PUT, HttpMethod.OPTIONS)
+                .build();
+    }
 
     @GetMapping("/events")
     @ApiOperation(value = "Récupére la liste de toutes les événements")
