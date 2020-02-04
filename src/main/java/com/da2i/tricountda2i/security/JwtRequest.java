@@ -1,4 +1,4 @@
-package com.da2i.tricountda2i.model;
+package com.da2i.tricountda2i.security;
 
 import java.io.Serializable;
 

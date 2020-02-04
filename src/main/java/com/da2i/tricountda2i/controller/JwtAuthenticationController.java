@@ -1,9 +1,9 @@
 package com.da2i.tricountda2i.controller;
 
 import com.da2i.tricountda2i.config.JwtTokenUtil;
-import com.da2i.tricountda2i.model.JwtRequest;
-import com.da2i.tricountda2i.model.JwtResponse;
 import com.da2i.tricountda2i.model.Utilisateur;
+import com.da2i.tricountda2i.security.JwtRequest;
+import com.da2i.tricountda2i.security.JwtResponse;
 import com.da2i.tricountda2i.service.JwtUserDetailsService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

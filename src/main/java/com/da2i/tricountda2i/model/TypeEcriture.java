@@ -18,11 +18,13 @@ public class TypeEcriture implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "type_ecriture_generator")
+	@SequenceGenerator(name="type_ecriture_generator", sequenceName = "type_ecriture_seq", initialValue = 4)
 	private Integer idTypeEcriture;
 
 	private String nomDuType;
 
-	@OneToMany(mappedBy="typeEcriture")
+	@OneToMany(mappedBy="typeEcriture",targetEntity = Ecriture.class)
 	private List<Ecriture> ecritures;
 
 	public TypeEcriture() {

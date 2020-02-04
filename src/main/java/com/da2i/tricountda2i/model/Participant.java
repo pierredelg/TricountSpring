@@ -18,16 +18,18 @@ public class Participant implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "participant_generator")
+	@SequenceGenerator(name="participant_generator", sequenceName = "participant_seq", initialValue = 6)
 	private Integer idParticipants;
 
 	private String surnom;
 
 	//Paye des écritures
-	@OneToMany(mappedBy="participant")
+	@OneToMany(mappedBy="participant",targetEntity = Ecriture.class)
 	private List<Ecriture> ecrituresPayees;
 
 	//liste des événement créés
-	@OneToMany(mappedBy="participant")
+	@OneToMany(mappedBy="participant",targetEntity = Evenement.class)
 	private List<Evenement> evenementsCrees;
 
 	//Liste des participations

@@ -18,13 +18,15 @@ public class Evenement implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "evenement_generator")
+	@SequenceGenerator(name="evenement_generator", sequenceName = "evenement_seq", initialValue = 4)
 	private Integer idEvenement;
 
 	private String description;
 
 	private String titre;
 
-	@OneToMany(mappedBy="evenement")
+	@OneToMany(mappedBy="evenement",targetEntity = Ecriture.class,fetch = FetchType.EAGER)
 	private List<Ecriture> ecritures;
 
 	//Créateur

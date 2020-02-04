@@ -28,6 +28,9 @@ public class UserService {
 
     public Utilisateur addUser(Utilisateur utilisateur){
         utilisateur.setMotDePasse(bcryptEncoder.encode(utilisateur.getMotDePasse()));
+//        Utilisateur lastUser = userRepository.findLastUser();
+//        int lastId = lastUser.getIdUtilisateur();
+//        utilisateur.setIdUtilisateur(++lastId);
         return userRepository.save(utilisateur);
     }
 

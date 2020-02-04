@@ -28,9 +28,9 @@ public class Devise implements Serializable {
 	@ApiModelProperty(notes = "Le symbole de la devise")
 	private String symbole;
 
-	@OneToMany(mappedBy="devise")
-	@ApiModelProperty(notes = "La liste des écritures contenant la devise")
-	private List<Ecriture> ecritures;
+//	@ApiModelProperty(notes = "La liste des écritures contenant la devise")
+//	@OneToMany(mappedBy="devise",targetEntity = Ecriture.class)
+//	private List<Ecriture> ecritures;
 
 	public Devise() {
 	}
@@ -59,12 +59,12 @@ public class Devise implements Serializable {
 		this.symbole = symbole;
 	}
 
-	public List<Ecriture> getEcritures() {
-		return this.ecritures;
-	}
-
-	public void setEcritures(List<Ecriture> ecritures) {
-		this.ecritures = ecritures;
-	}
+//	public List<Ecriture> getEcritures() {
+//		return this.ecritures;
+//	}
+//
+//	public void setEcritures(List<Ecriture> ecritures) {
+//		this.ecritures = ecritures;
+//	}
 
 }

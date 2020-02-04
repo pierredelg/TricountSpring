@@ -19,6 +19,8 @@ public class Ecriture implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ecriture_generator")
+	@SequenceGenerator(name="ecriture_generator", sequenceName = "ecriture_seq", initialValue = 21)
 	private Integer idEcriture;
 
 	@Temporal(TemporalType.DATE)
