@@ -8,6 +8,7 @@ import com.da2i.tricountda2i.service.JwtUserDetailsService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.BadCredentialsException;
@@ -76,6 +77,12 @@ public class JwtAuthenticationController {
 
     @PostMapping(value = "/register")
     public ResponseEntity<?> saveUser(@RequestBody Utilisateur user) {
-        return ResponseEntity.ok(userDetailsService.save(user));
+        Utilisateur utilisateur = userDetailsService.save(user);
+
+        if(utilisateur != null) {
+            return ResponseEntity.ok(utilisateur);
+        }else {
+            return new ResponseEntity<>("L'email \"" + user.getEmail() + "\" est dejà enregistré", HttpStatus.BAD_REQUEST);
+        }
     }
 }

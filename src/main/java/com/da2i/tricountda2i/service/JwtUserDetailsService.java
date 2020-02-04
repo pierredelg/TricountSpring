@@ -27,11 +27,7 @@ public class JwtUserDetailsService implements UserDetailsService {
                 new ArrayList<>());
     }
 
-    //TODO remplacer Utilisateur en param avec un DTO
     public Utilisateur save(Utilisateur user) {
-//        Utilisateur newUser = new Utilisateur();
-//        newUser.setEmail(user.getEmail());
-//        newUser.setMotDePasse(bcryptEncoder.encode(user.getMotDePasse()));
         return userService.addUser(user);
     }
 }
