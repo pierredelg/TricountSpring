@@ -1,9 +1,10 @@
 package com.da2i.tricountda2i.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModel;
 
-import java.io.Serializable;
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 
@@ -12,7 +13,6 @@ import java.util.List;
  * 
  */
 @Entity
-@NamedQuery(name="Evenement.findAll", query="SELECT e FROM Evenement e")
 @ApiModel(description ="Informations concernant un événement")
 public class Evenement implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -26,14 +26,15 @@ public class Evenement implements Serializable {
 
 	private String titre;
 
-	@OneToMany(mappedBy="evenement",targetEntity = Ecriture.class,fetch = FetchType.EAGER)
+	@OneToMany(mappedBy="evenement")
 	private List<Ecriture> ecritures;
 
-	//Créateur
-	@ManyToOne
-	private Participant participant;
-
-	@ManyToMany(mappedBy= "evenementsParticipes")
+	@ManyToMany
+	@JoinTable(
+			name = "participants_evenements",
+			joinColumns = @JoinColumn(name = "id_evenement"),
+			inverseJoinColumns = @JoinColumn(name = "id_participant")
+	)
 	private List<Participant> participants;
 
 	public Evenement() {
@@ -69,14 +70,6 @@ public class Evenement implements Serializable {
 
 	public void setEcritures(List<Ecriture> ecritures) {
 		this.ecritures = ecritures;
-	}
-
-	public Participant getParticipant() {
-		return this.participant;
-	}
-
-	public void setParticipant(Participant participant) {
-		this.participant = participant;
 	}
 
 	public List<Participant> getParticipants() {

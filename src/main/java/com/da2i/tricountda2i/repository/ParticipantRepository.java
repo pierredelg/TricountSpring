@@ -8,8 +8,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ParticipantRepository extends CrudRepository<Participant,Long> {
-    Participant findByIdParticipants(int id);
+    Participant findByIdParticipant(int id);
 
-    @Query("select p from Participant p order by p.idParticipants desc")
+    @Query("select p from Participant p order by p.idParticipant desc")
     Participant findLastParticipant();
 }

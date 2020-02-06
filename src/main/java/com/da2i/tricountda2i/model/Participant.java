@@ -1,9 +1,10 @@
 package com.da2i.tricountda2i.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModel;
 
-import java.io.Serializable;
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 
@@ -12,7 +13,6 @@ import java.util.List;
  * 
  */
 @Entity
-@NamedQuery(name="Participant.findAll", query="SELECT p FROM Participant p")
 @ApiModel(description ="Informations concernant un participant")
 public class Participant implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -20,37 +20,38 @@ public class Participant implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "participant_generator")
 	@SequenceGenerator(name="participant_generator", sequenceName = "participant_seq", initialValue = 6)
-	private Integer idParticipants;
+	private Integer idParticipant;
 
 	private String surnom;
 
 	//Paye des écritures
-	@OneToMany(mappedBy="participant",targetEntity = Ecriture.class)
+	@OneToMany(mappedBy="participant")
 	private List<Ecriture> ecrituresPayees;
 
-	//liste des événement créés
-	@OneToMany(mappedBy="participant",targetEntity = Evenement.class)
-	private List<Evenement> evenementsCrees;
+	@ManyToMany
+	@JoinTable(
+			name = "participants_ecritures",
+			joinColumns = @JoinColumn(name = "id_participant"),
+			inverseJoinColumns = @JoinColumn(name = "id_ecriture")
+	)
+	private List<Ecriture> ecrituresAPayer;
 
 	//Liste des participations
-	@ManyToMany
+	@ManyToMany(mappedBy = "participants")
 	private List<Evenement> evenementsParticipes;
 
 	@OneToOne
 	private Utilisateur utilisateur;
 
-	@ManyToMany
-	private List<Ecriture> ecrituresAPayer;
-
 	public Participant() {
 	}
 
-	public Integer getIdParticipants() {
-		return this.idParticipants;
+	public Integer getIdParticipant() {
+		return this.idParticipant;
 	}
 
-	public void setIdParticipants(Integer idParticipants) {
-		this.idParticipants = idParticipants;
+	public void setIdParticipant(Integer idParticipants) {
+		this.idParticipant = idParticipants;
 	}
 
 	public String getSurnom() {
@@ -67,14 +68,6 @@ public class Participant implements Serializable {
 
 	public void setEcrituresPayees(List<Ecriture> ecritures1) {
 		this.ecrituresPayees = ecritures1;
-	}
-
-	public List<Evenement> getEvenementsCrees() {
-		return this.evenementsCrees;
-	}
-
-	public void setEvenementsCrees(List<Evenement> evenements1) {
-		this.evenementsCrees = evenements1;
 	}
 
 	public Utilisateur getUtilisateur() {

@@ -1,6 +1,8 @@
 package com.da2i.tricountda2i.controller;
 
+import com.da2i.tricountda2i.model.Evenement;
 import com.da2i.tricountda2i.model.Utilisateur;
+import com.da2i.tricountda2i.service.EventService;
 import com.da2i.tricountda2i.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -18,6 +20,9 @@ public class UserController {
 
     @Autowired
     UserService userService;
+
+    @Autowired
+    EventService eventService;
 
     @ApiOperation(value = "Récupere les méthodes permises pour les utilisateurs inscrits")
     @RequestMapping(value="/users", method = RequestMethod.OPTIONS)
@@ -46,6 +51,35 @@ public class UserController {
 
         if(utilisateur != null){
             return new ResponseEntity<>(utilisateur, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+    }
+    @GetMapping(value ="/users/{email}")
+    @ApiOperation(value = "Récupére un utilisateur avec son email")
+    public ResponseEntity<Utilisateur> getuserByEmail(@PathVariable String email){
+
+        Utilisateur utilisateur = userService.getUserByEmail(email);
+
+        if(utilisateur != null){
+            return new ResponseEntity<>(utilisateur, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+    }
+
+
+    @GetMapping(value ="/users/{id}/events")
+    @ApiOperation(value = "Récupére les événements d'un utilisateur")
+    public ResponseEntity<List<Evenement>> getAllEvents(@PathVariable Integer id){
+
+        Utilisateur utilisateur = userService.getuser(id);
+
+        if(utilisateur != null){
+
+            List<Evenement> evenementList = eventService.getEvenementByUser(utilisateur);
+
+            if(evenementList != null) {
+                return new ResponseEntity<>(evenementList, HttpStatus.OK);
+            }
         }
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }

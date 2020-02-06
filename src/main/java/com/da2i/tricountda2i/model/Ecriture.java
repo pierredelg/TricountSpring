@@ -2,8 +2,8 @@ package com.da2i.tricountda2i.model;
 
 import io.swagger.annotations.ApiModel;
 
-import java.io.Serializable;
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
@@ -13,7 +13,6 @@ import java.util.List;
  * 
  */
 @Entity
-@NamedQuery(name="Ecriture.findAll", query="SELECT e FROM Ecriture e")
 @ApiModel(description ="Informations concernant une écriture")
 public class Ecriture implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -30,22 +29,25 @@ public class Ecriture implements Serializable {
 
 	private Double montant;
 
-	private byte[] photo;
-
 	@ManyToOne
+	@JoinColumn(name = "code",nullable = false)
 	private Devise devise;
 
 	@ManyToOne
+	@JoinColumn(name = "id_evenement",nullable = false)
 	private Evenement evenement;
 
+	//Payeur
 	@ManyToOne
+	@JoinColumn(name = "id_Participant",nullable = false)
 	private Participant participant;
 
-	@ManyToOne
-	private TypeEcriture typeEcriture;
-
-	@ManyToMany(mappedBy= "ecrituresAPayer")
+	//Liste des personnes pour qui on paye
+	@ManyToMany(mappedBy = "ecrituresAPayer")
 	private List<Participant> participants;
+
+	@Enumerated(EnumType.STRING)
+	private TypeEcriture typeEcriture;
 
 	public Ecriture() {
 	}
@@ -80,14 +82,6 @@ public class Ecriture implements Serializable {
 
 	public void setMontant(Double montant) {
 		this.montant = montant;
-	}
-
-	public byte[] getPhoto() {
-		return this.photo;
-	}
-
-	public void setPhoto(byte[] photo) {
-		this.photo = photo;
 	}
 
 	public Devise getDevise() {

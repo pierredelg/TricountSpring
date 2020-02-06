@@ -26,8 +26,8 @@ public class BalanceService {
         Map<Participant,Double> map = new HashMap<>();
         evenement.getParticipants().forEach(participant -> map.put(participant, (double) 0));
 
-        //On ajoute aussi celui qui crée l'évenement
-        map.put(evenement.getParticipant(),(double)0);
+        /*//On ajoute aussi celui qui crée l'évenement
+        map.put(evenement.getParticipant(),(double)0);*/
 
         //Pour chaque écriture de l'événement
         for (Ecriture ecriture: evenement.getEcritures()) {
