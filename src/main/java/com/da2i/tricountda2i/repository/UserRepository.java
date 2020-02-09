@@ -7,7 +7,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserRepository extends CrudRepository<Utilisateur,Long> {
+
     Utilisateur findByIdUtilisateur(Integer idUtilisateur);
+
     Utilisateur findByEmail(String email);
 
     @Query("select u from Utilisateur u order by u.idUtilisateur desc")

@@ -1,3320 +1,360 @@
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg;
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj;
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn;
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh;
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye;
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl;
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9;
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc;
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj;
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb;
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q;
-drop table if exists devise cascade;
-drop table if exists ecriture cascade;
-drop table if exists evenement cascade;
-drop table if exists participant cascade;
-drop table if exists participant_ecrituresapayer cascade;
-drop table if exists participant_evenements_participes cascade;
-drop table if exists type_ecriture cascade;
-drop table if exists utilisateur cascade;alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table ecriture drop constraint FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table ecriture drop constraint FKcevxkme76bnc2kguwyiegahrj
-alter table ecriture drop constraint FK7cl7162od4qup7ckf3lxh2kwn
-alter table ecriture drop constraint FKfsaw5ol3oe3cily8va9oqaehh
-alter table evenement drop constraint FKdcdp1vtvmmshm0ej813ah57ye
-alter table participant drop constraint FKkyvypv1fckde77nfuxgaprjgl
-alter table participant_ecrituresapayer drop constraint FKkhx80xwr13owtlkaddyo8ngd9
-alter table participant_ecrituresapayer drop constraint FK891vpb97o3rlwjewroh6ctrvc
-alter table participant_evenements_participes drop constraint FKcy8ns78aornradx8kvytcjufj
-alter table participant_evenements_participes drop constraint FK1j89nhw0dv4snu6qgfouymsdb
-alter table utilisateur drop constraint FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists hibernate_sequences cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists hibernate_sequences cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
-alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
-drop table if exists devise cascade
-drop table if exists ecriture cascade
-drop table if exists evenement cascade
-drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
-drop table if exists utilisateur cascade
-drop sequence if exists hibernate_sequence
-drop sequence if exists participant_seq
-drop sequence if exists utilisateur_seq
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
+alter table if exists ecriture drop constraint if exists FK1da51u07xvdtt4b6gol34ydos
+alter table if exists ecriture drop constraint if exists FK7or6oxkcr9or1g1m9jsihmvju
+alter table if exists ecriture drop constraint if exists FKlhjy8b3e0x86m2ecan7d2favb
 alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
+alter table if exists participants_ecritures drop constraint if exists FKqt2t0lsv89uxa0fe7bw71pjbu
+alter table if exists participants_ecritures drop constraint if exists FK98bjd5xq14xr98e310c921vi5
+alter table if exists participants_evenements drop constraint if exists FK710ysctrdsfatpd1ib3nmhbtl
+alter table if exists participants_evenements drop constraint if exists FKer4wro1trg74h3a5ovjka8jvd
+alter table if exists utilisateur drop constraint if exists FKj44hvvygkixu3mqyymoj6thwf
 drop table if exists devise cascade
 drop table if exists ecriture cascade
 drop table if exists evenement cascade
 drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
+drop table if exists participants_ecritures cascade
+drop table if exists participants_evenements cascade
 drop table if exists utilisateur cascade
 drop sequence if exists ecriture_seq
 drop sequence if exists evenement_seq
 drop sequence if exists participant_seq
-drop sequence if exists type_ecriture_seq
 drop sequence if exists utilisateur_seq
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
+alter table if exists ecriture drop constraint if exists FK1da51u07xvdtt4b6gol34ydos
+alter table if exists ecriture drop constraint if exists FK7or6oxkcr9or1g1m9jsihmvju
+alter table if exists ecriture drop constraint if exists FKlhjy8b3e0x86m2ecan7d2favb
 alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
+alter table if exists participants_ecritures drop constraint if exists FKqt2t0lsv89uxa0fe7bw71pjbu
+alter table if exists participants_ecritures drop constraint if exists FK98bjd5xq14xr98e310c921vi5
+alter table if exists participants_evenements drop constraint if exists FK710ysctrdsfatpd1ib3nmhbtl
+alter table if exists participants_evenements drop constraint if exists FKer4wro1trg74h3a5ovjka8jvd
+alter table if exists utilisateur drop constraint if exists FKj44hvvygkixu3mqyymoj6thwf
 drop table if exists devise cascade
 drop table if exists ecriture cascade
 drop table if exists evenement cascade
 drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
+drop table if exists participants_ecritures cascade
+drop table if exists participants_evenements cascade
 drop table if exists utilisateur cascade
 drop sequence if exists ecriture_seq
 drop sequence if exists evenement_seq
 drop sequence if exists participant_seq
-drop sequence if exists type_ecriture_seq
 drop sequence if exists utilisateur_seq
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
+alter table if exists ecriture drop constraint if exists FK1da51u07xvdtt4b6gol34ydos
+alter table if exists ecriture drop constraint if exists FK7or6oxkcr9or1g1m9jsihmvju
+alter table if exists ecriture drop constraint if exists FKlhjy8b3e0x86m2ecan7d2favb
 alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
+alter table if exists participants_ecritures drop constraint if exists FKqt2t0lsv89uxa0fe7bw71pjbu
+alter table if exists participants_ecritures drop constraint if exists FK98bjd5xq14xr98e310c921vi5
+alter table if exists participants_evenements drop constraint if exists FK710ysctrdsfatpd1ib3nmhbtl
+alter table if exists participants_evenements drop constraint if exists FKer4wro1trg74h3a5ovjka8jvd
+alter table if exists utilisateur drop constraint if exists FKj44hvvygkixu3mqyymoj6thwf
 drop table if exists devise cascade
 drop table if exists ecriture cascade
 drop table if exists evenement cascade
 drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
+drop table if exists participants_ecritures cascade
+drop table if exists participants_evenements cascade
 drop table if exists utilisateur cascade
 drop sequence if exists ecriture_seq
 drop sequence if exists evenement_seq
 drop sequence if exists participant_seq
-drop sequence if exists type_ecriture_seq
 drop sequence if exists utilisateur_seq
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
+alter table if exists ecriture drop constraint if exists FK1da51u07xvdtt4b6gol34ydos
+alter table if exists ecriture drop constraint if exists FK7or6oxkcr9or1g1m9jsihmvju
+alter table if exists ecriture drop constraint if exists FKlhjy8b3e0x86m2ecan7d2favb
 alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
+alter table if exists participants_ecritures drop constraint if exists FKqt2t0lsv89uxa0fe7bw71pjbu
+alter table if exists participants_ecritures drop constraint if exists FK98bjd5xq14xr98e310c921vi5
+alter table if exists participants_evenements drop constraint if exists FK710ysctrdsfatpd1ib3nmhbtl
+alter table if exists participants_evenements drop constraint if exists FKer4wro1trg74h3a5ovjka8jvd
+alter table if exists utilisateur drop constraint if exists FKj44hvvygkixu3mqyymoj6thwf
 drop table if exists devise cascade
 drop table if exists ecriture cascade
 drop table if exists evenement cascade
 drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
+drop table if exists participants_ecritures cascade
+drop table if exists participants_evenements cascade
 drop table if exists utilisateur cascade
 drop sequence if exists ecriture_seq
 drop sequence if exists evenement_seq
 drop sequence if exists participant_seq
-drop sequence if exists type_ecriture_seq
 drop sequence if exists utilisateur_seq
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
+alter table if exists ecriture drop constraint if exists FK1da51u07xvdtt4b6gol34ydos
+alter table if exists ecriture drop constraint if exists FK7or6oxkcr9or1g1m9jsihmvju
+alter table if exists ecriture drop constraint if exists FKlhjy8b3e0x86m2ecan7d2favb
 alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
+alter table if exists participants_ecritures drop constraint if exists FKqt2t0lsv89uxa0fe7bw71pjbu
+alter table if exists participants_ecritures drop constraint if exists FK98bjd5xq14xr98e310c921vi5
+alter table if exists participants_evenements drop constraint if exists FK710ysctrdsfatpd1ib3nmhbtl
+alter table if exists participants_evenements drop constraint if exists FKer4wro1trg74h3a5ovjka8jvd
+alter table if exists utilisateur drop constraint if exists FKj44hvvygkixu3mqyymoj6thwf
 drop table if exists devise cascade
 drop table if exists ecriture cascade
 drop table if exists evenement cascade
 drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
+drop table if exists participants_ecritures cascade
+drop table if exists participants_evenements cascade
 drop table if exists utilisateur cascade
 drop sequence if exists ecriture_seq
 drop sequence if exists evenement_seq
 drop sequence if exists participant_seq
-drop sequence if exists type_ecriture_seq
 drop sequence if exists utilisateur_seq
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
+alter table if exists ecriture drop constraint if exists FK1da51u07xvdtt4b6gol34ydos
+alter table if exists ecriture drop constraint if exists FK7or6oxkcr9or1g1m9jsihmvju
+alter table if exists ecriture drop constraint if exists FKlhjy8b3e0x86m2ecan7d2favb
 alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
+alter table if exists participants_ecritures drop constraint if exists FKqt2t0lsv89uxa0fe7bw71pjbu
+alter table if exists participants_ecritures drop constraint if exists FK98bjd5xq14xr98e310c921vi5
+alter table if exists participants_evenements drop constraint if exists FK710ysctrdsfatpd1ib3nmhbtl
+alter table if exists participants_evenements drop constraint if exists FKer4wro1trg74h3a5ovjka8jvd
+alter table if exists utilisateur drop constraint if exists FKj44hvvygkixu3mqyymoj6thwf
 drop table if exists devise cascade
 drop table if exists ecriture cascade
 drop table if exists evenement cascade
 drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
+drop table if exists participants_ecritures cascade
+drop table if exists participants_evenements cascade
 drop table if exists utilisateur cascade
 drop sequence if exists ecriture_seq
 drop sequence if exists evenement_seq
 drop sequence if exists participant_seq
-drop sequence if exists type_ecriture_seq
 drop sequence if exists utilisateur_seq
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
+alter table if exists ecriture drop constraint if exists FK1da51u07xvdtt4b6gol34ydos
+alter table if exists ecriture drop constraint if exists FK7or6oxkcr9or1g1m9jsihmvju
+alter table if exists ecriture drop constraint if exists FKlhjy8b3e0x86m2ecan7d2favb
 alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
+alter table if exists participants_ecritures drop constraint if exists FKqt2t0lsv89uxa0fe7bw71pjbu
+alter table if exists participants_ecritures drop constraint if exists FK98bjd5xq14xr98e310c921vi5
+alter table if exists participants_evenements drop constraint if exists FK710ysctrdsfatpd1ib3nmhbtl
+alter table if exists participants_evenements drop constraint if exists FKer4wro1trg74h3a5ovjka8jvd
+alter table if exists utilisateur drop constraint if exists FKj44hvvygkixu3mqyymoj6thwf
 drop table if exists devise cascade
 drop table if exists ecriture cascade
 drop table if exists evenement cascade
 drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
+drop table if exists participants_ecritures cascade
+drop table if exists participants_evenements cascade
 drop table if exists utilisateur cascade
 drop sequence if exists ecriture_seq
 drop sequence if exists evenement_seq
 drop sequence if exists participant_seq
-drop sequence if exists type_ecriture_seq
 drop sequence if exists utilisateur_seq
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
+alter table if exists ecriture drop constraint if exists FK1da51u07xvdtt4b6gol34ydos
+alter table if exists ecriture drop constraint if exists FK7or6oxkcr9or1g1m9jsihmvju
+alter table if exists ecriture drop constraint if exists FKlhjy8b3e0x86m2ecan7d2favb
 alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
+alter table if exists participants_ecritures drop constraint if exists FKqt2t0lsv89uxa0fe7bw71pjbu
+alter table if exists participants_ecritures drop constraint if exists FK98bjd5xq14xr98e310c921vi5
+alter table if exists participants_evenements drop constraint if exists FK710ysctrdsfatpd1ib3nmhbtl
+alter table if exists participants_evenements drop constraint if exists FKer4wro1trg74h3a5ovjka8jvd
+alter table if exists utilisateur drop constraint if exists FKj44hvvygkixu3mqyymoj6thwf
 drop table if exists devise cascade
 drop table if exists ecriture cascade
 drop table if exists evenement cascade
 drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
+drop table if exists participants_ecritures cascade
+drop table if exists participants_evenements cascade
 drop table if exists utilisateur cascade
 drop sequence if exists ecriture_seq
 drop sequence if exists evenement_seq
 drop sequence if exists participant_seq
-drop sequence if exists type_ecriture_seq
 drop sequence if exists utilisateur_seq
-alter table if exists ecriture drop constraint if exists FKn12g1ljrrd97vnjj3c0nbyqsg
-alter table if exists ecriture drop constraint if exists FKcevxkme76bnc2kguwyiegahrj
-alter table if exists ecriture drop constraint if exists FK7cl7162od4qup7ckf3lxh2kwn
-alter table if exists ecriture drop constraint if exists FKfsaw5ol3oe3cily8va9oqaehh
-alter table if exists evenement drop constraint if exists FKdcdp1vtvmmshm0ej813ah57ye
+alter table if exists ecriture drop constraint if exists FK1da51u07xvdtt4b6gol34ydos
+alter table if exists ecriture drop constraint if exists FK7or6oxkcr9or1g1m9jsihmvju
+alter table if exists ecriture drop constraint if exists FKlhjy8b3e0x86m2ecan7d2favb
 alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
-alter table if exists participant_ecrituresapayer drop constraint if exists FKkhx80xwr13owtlkaddyo8ngd9
-alter table if exists participant_ecrituresapayer drop constraint if exists FK891vpb97o3rlwjewroh6ctrvc
-alter table if exists participant_evenements_participes drop constraint if exists FKcy8ns78aornradx8kvytcjufj
-alter table if exists participant_evenements_participes drop constraint if exists FK1j89nhw0dv4snu6qgfouymsdb
-alter table if exists utilisateur drop constraint if exists FKfyfj1riin8bumbvdoj6cj4y2q
+alter table if exists participants_ecritures drop constraint if exists FKqt2t0lsv89uxa0fe7bw71pjbu
+alter table if exists participants_ecritures drop constraint if exists FK98bjd5xq14xr98e310c921vi5
+alter table if exists participants_evenements drop constraint if exists FK710ysctrdsfatpd1ib3nmhbtl
+alter table if exists participants_evenements drop constraint if exists FKer4wro1trg74h3a5ovjka8jvd
+alter table if exists utilisateur drop constraint if exists FKj44hvvygkixu3mqyymoj6thwf
 drop table if exists devise cascade
 drop table if exists ecriture cascade
 drop table if exists evenement cascade
 drop table if exists participant cascade
-drop table if exists participant_ecrituresapayer cascade
-drop table if exists participant_evenements_participes cascade
-drop table if exists type_ecriture cascade
+drop table if exists participants_ecritures cascade
+drop table if exists participants_evenements cascade
 drop table if exists utilisateur cascade
 drop sequence if exists ecriture_seq
 drop sequence if exists evenement_seq
 drop sequence if exists participant_seq
-drop sequence if exists type_ecriture_seq
+drop sequence if exists utilisateur_seq
+alter table if exists ecriture drop constraint if exists FK1da51u07xvdtt4b6gol34ydos
+alter table if exists ecriture drop constraint if exists FK7or6oxkcr9or1g1m9jsihmvju
+alter table if exists ecriture drop constraint if exists FKlhjy8b3e0x86m2ecan7d2favb
+alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
+alter table if exists participants_ecritures drop constraint if exists FKqt2t0lsv89uxa0fe7bw71pjbu
+alter table if exists participants_ecritures drop constraint if exists FK98bjd5xq14xr98e310c921vi5
+alter table if exists participants_evenements drop constraint if exists FK710ysctrdsfatpd1ib3nmhbtl
+alter table if exists participants_evenements drop constraint if exists FKer4wro1trg74h3a5ovjka8jvd
+alter table if exists utilisateur drop constraint if exists FKj44hvvygkixu3mqyymoj6thwf
+drop table if exists devise cascade
+drop table if exists ecriture cascade
+drop table if exists evenement cascade
+drop table if exists participant cascade
+drop table if exists participants_ecritures cascade
+drop table if exists participants_evenements cascade
+drop table if exists utilisateur cascade
+drop sequence if exists ecriture_seq
+drop sequence if exists evenement_seq
+drop sequence if exists participant_seq
+drop sequence if exists utilisateur_seq
+alter table if exists ecriture drop constraint if exists FK1da51u07xvdtt4b6gol34ydos
+alter table if exists ecriture drop constraint if exists FK7or6oxkcr9or1g1m9jsihmvju
+alter table if exists ecriture drop constraint if exists FKlhjy8b3e0x86m2ecan7d2favb
+alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
+alter table if exists participants_ecritures drop constraint if exists FKqt2t0lsv89uxa0fe7bw71pjbu
+alter table if exists participants_ecritures drop constraint if exists FK98bjd5xq14xr98e310c921vi5
+alter table if exists participants_evenements drop constraint if exists FK710ysctrdsfatpd1ib3nmhbtl
+alter table if exists participants_evenements drop constraint if exists FKer4wro1trg74h3a5ovjka8jvd
+alter table if exists utilisateur drop constraint if exists FKj44hvvygkixu3mqyymoj6thwf
+drop table if exists devise cascade
+drop table if exists ecriture cascade
+drop table if exists evenement cascade
+drop table if exists participant cascade
+drop table if exists participants_ecritures cascade
+drop table if exists participants_evenements cascade
+drop table if exists utilisateur cascade
+drop sequence if exists ecriture_seq
+drop sequence if exists evenement_seq
+drop sequence if exists participant_seq
+drop sequence if exists utilisateur_seq
+alter table if exists ecriture drop constraint if exists FK1da51u07xvdtt4b6gol34ydos
+alter table if exists ecriture drop constraint if exists FK7or6oxkcr9or1g1m9jsihmvju
+alter table if exists ecriture drop constraint if exists FKlhjy8b3e0x86m2ecan7d2favb
+alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
+alter table if exists participants_ecritures drop constraint if exists FKqt2t0lsv89uxa0fe7bw71pjbu
+alter table if exists participants_ecritures drop constraint if exists FK98bjd5xq14xr98e310c921vi5
+alter table if exists participants_evenements drop constraint if exists FK710ysctrdsfatpd1ib3nmhbtl
+alter table if exists participants_evenements drop constraint if exists FKer4wro1trg74h3a5ovjka8jvd
+alter table if exists utilisateur drop constraint if exists FKj44hvvygkixu3mqyymoj6thwf
+drop table if exists devise cascade
+drop table if exists ecriture cascade
+drop table if exists evenement cascade
+drop table if exists participant cascade
+drop table if exists participants_ecritures cascade
+drop table if exists participants_evenements cascade
+drop table if exists utilisateur cascade
+drop sequence if exists ecriture_seq
+drop sequence if exists evenement_seq
+drop sequence if exists participant_seq
+drop sequence if exists utilisateur_seq
+alter table if exists ecriture drop constraint if exists FK1da51u07xvdtt4b6gol34ydos
+alter table if exists ecriture drop constraint if exists FK7or6oxkcr9or1g1m9jsihmvju
+alter table if exists ecriture drop constraint if exists FKlhjy8b3e0x86m2ecan7d2favb
+alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
+alter table if exists participants_ecritures drop constraint if exists FKqt2t0lsv89uxa0fe7bw71pjbu
+alter table if exists participants_ecritures drop constraint if exists FK98bjd5xq14xr98e310c921vi5
+alter table if exists participants_evenements drop constraint if exists FK710ysctrdsfatpd1ib3nmhbtl
+alter table if exists participants_evenements drop constraint if exists FKer4wro1trg74h3a5ovjka8jvd
+alter table if exists utilisateur drop constraint if exists FKj44hvvygkixu3mqyymoj6thwf
+drop table if exists devise cascade
+drop table if exists ecriture cascade
+drop table if exists evenement cascade
+drop table if exists participant cascade
+drop table if exists participants_ecritures cascade
+drop table if exists participants_evenements cascade
+drop table if exists utilisateur cascade
+drop sequence if exists ecriture_seq
+drop sequence if exists evenement_seq
+drop sequence if exists participant_seq
+drop sequence if exists utilisateur_seq
+alter table if exists ecriture drop constraint if exists FK1da51u07xvdtt4b6gol34ydos
+alter table if exists ecriture drop constraint if exists FK7or6oxkcr9or1g1m9jsihmvju
+alter table if exists ecriture drop constraint if exists FKlhjy8b3e0x86m2ecan7d2favb
+alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
+alter table if exists participants_ecritures drop constraint if exists FKqt2t0lsv89uxa0fe7bw71pjbu
+alter table if exists participants_ecritures drop constraint if exists FK98bjd5xq14xr98e310c921vi5
+alter table if exists participants_evenements drop constraint if exists FK710ysctrdsfatpd1ib3nmhbtl
+alter table if exists participants_evenements drop constraint if exists FKer4wro1trg74h3a5ovjka8jvd
+alter table if exists utilisateur drop constraint if exists FKj44hvvygkixu3mqyymoj6thwf
+drop table if exists devise cascade
+drop table if exists ecriture cascade
+drop table if exists evenement cascade
+drop table if exists participant cascade
+drop table if exists participants_ecritures cascade
+drop table if exists participants_evenements cascade
+drop table if exists utilisateur cascade
+drop sequence if exists ecriture_seq
+drop sequence if exists evenement_seq
+drop sequence if exists participant_seq
+drop sequence if exists utilisateur_seq
+alter table if exists ecriture drop constraint if exists FK1da51u07xvdtt4b6gol34ydos
+alter table if exists ecriture drop constraint if exists FK7or6oxkcr9or1g1m9jsihmvju
+alter table if exists ecriture drop constraint if exists FKlhjy8b3e0x86m2ecan7d2favb
+alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
+alter table if exists participants_ecritures drop constraint if exists FKqt2t0lsv89uxa0fe7bw71pjbu
+alter table if exists participants_ecritures drop constraint if exists FK98bjd5xq14xr98e310c921vi5
+alter table if exists participants_evenements drop constraint if exists FK710ysctrdsfatpd1ib3nmhbtl
+alter table if exists participants_evenements drop constraint if exists FKer4wro1trg74h3a5ovjka8jvd
+alter table if exists utilisateur drop constraint if exists FKj44hvvygkixu3mqyymoj6thwf
+drop table if exists devise cascade
+drop table if exists ecriture cascade
+drop table if exists evenement cascade
+drop table if exists participant cascade
+drop table if exists participants_ecritures cascade
+drop table if exists participants_evenements cascade
+drop table if exists utilisateur cascade
+drop sequence if exists ecriture_seq
+drop sequence if exists evenement_seq
+drop sequence if exists participant_seq
+drop sequence if exists utilisateur_seq
+alter table if exists ecriture drop constraint if exists FK1da51u07xvdtt4b6gol34ydos
+alter table if exists ecriture drop constraint if exists FK7or6oxkcr9or1g1m9jsihmvju
+alter table if exists ecriture drop constraint if exists FKlhjy8b3e0x86m2ecan7d2favb
+alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
+alter table if exists participants_ecritures drop constraint if exists FKqt2t0lsv89uxa0fe7bw71pjbu
+alter table if exists participants_ecritures drop constraint if exists FK98bjd5xq14xr98e310c921vi5
+alter table if exists participants_evenements drop constraint if exists FK710ysctrdsfatpd1ib3nmhbtl
+alter table if exists participants_evenements drop constraint if exists FKer4wro1trg74h3a5ovjka8jvd
+alter table if exists utilisateur drop constraint if exists FKj44hvvygkixu3mqyymoj6thwf
+drop table if exists devise cascade
+drop table if exists ecriture cascade
+drop table if exists evenement cascade
+drop table if exists participant cascade
+drop table if exists participants_ecritures cascade
+drop table if exists participants_evenements cascade
+drop table if exists utilisateur cascade
+drop sequence if exists ecriture_seq
+drop sequence if exists evenement_seq
+drop sequence if exists participant_seq
+drop sequence if exists utilisateur_seq
+alter table if exists ecriture drop constraint if exists FK1da51u07xvdtt4b6gol34ydos
+alter table if exists ecriture drop constraint if exists FK7or6oxkcr9or1g1m9jsihmvju
+alter table if exists ecriture drop constraint if exists FKlhjy8b3e0x86m2ecan7d2favb
+alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
+alter table if exists participants_ecritures drop constraint if exists FKqt2t0lsv89uxa0fe7bw71pjbu
+alter table if exists participants_ecritures drop constraint if exists FK98bjd5xq14xr98e310c921vi5
+alter table if exists participants_evenements drop constraint if exists FK710ysctrdsfatpd1ib3nmhbtl
+alter table if exists participants_evenements drop constraint if exists FKer4wro1trg74h3a5ovjka8jvd
+alter table if exists utilisateur drop constraint if exists FKj44hvvygkixu3mqyymoj6thwf
+drop table if exists devise cascade
+drop table if exists ecriture cascade
+drop table if exists evenement cascade
+drop table if exists participant cascade
+drop table if exists participants_ecritures cascade
+drop table if exists participants_evenements cascade
+drop table if exists utilisateur cascade
+drop sequence if exists ecriture_seq
+drop sequence if exists evenement_seq
+drop sequence if exists participant_seq
+drop sequence if exists utilisateur_seq
+alter table if exists ecriture drop constraint if exists FK1da51u07xvdtt4b6gol34ydos
+alter table if exists ecriture drop constraint if exists FK7or6oxkcr9or1g1m9jsihmvju
+alter table if exists ecriture drop constraint if exists FKlhjy8b3e0x86m2ecan7d2favb
+alter table if exists participant drop constraint if exists FKkyvypv1fckde77nfuxgaprjgl
+alter table if exists participants_ecritures drop constraint if exists FKqt2t0lsv89uxa0fe7bw71pjbu
+alter table if exists participants_ecritures drop constraint if exists FK98bjd5xq14xr98e310c921vi5
+alter table if exists participants_evenements drop constraint if exists FK710ysctrdsfatpd1ib3nmhbtl
+alter table if exists participants_evenements drop constraint if exists FKer4wro1trg74h3a5ovjka8jvd
+alter table if exists utilisateur drop constraint if exists FKj44hvvygkixu3mqyymoj6thwf
+drop table if exists devise cascade
+drop table if exists ecriture cascade
+drop table if exists evenement cascade
+drop table if exists participant cascade
+drop table if exists participants_ecritures cascade
+drop table if exists participants_evenements cascade
+drop table if exists utilisateur cascade
+drop sequence if exists ecriture_seq
+drop sequence if exists evenement_seq
+drop sequence if exists participant_seq
 drop sequence if exists utilisateur_seq

@@ -39,7 +39,11 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         String method = request.getMethod();
         String urlRequest = request.getRequestURL().toString();
         String accessControl = request.getHeader("access-control-request-header");
-        logger.info(method + " from " + urlRequest + "  / authorization : " + requestTokenHeader + "  / access-control: " + accessControl);
+        boolean authorized = false;
+        if(requestTokenHeader != null){
+            authorized = true;
+        }
+        logger.info(method + " from " + urlRequest + "  / authorization : " + authorized + "  / access-control: " + accessControl);
 
 
         String username = null;

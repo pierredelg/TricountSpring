@@ -27,11 +27,15 @@ public class UserService {
     }
 
     public Utilisateur addUser(Utilisateur utilisateur){
-        utilisateur.setMotDePasse(bcryptEncoder.encode(utilisateur.getMotDePasse()));
-//        Utilisateur lastUser = userRepository.findLastUser();
-//        int lastId = lastUser.getIdUtilisateur();
-//        utilisateur.setIdUtilisateur(++lastId);
-        return userRepository.save(utilisateur);
+
+        Utilisateur utilisateurResponse = null;
+        Utilisateur utilisateurBDD = userRepository.findByEmail(utilisateur.getEmail());
+
+        if(utilisateurBDD == null) {
+            utilisateur.setMotDePasse(bcryptEncoder.encode(utilisateur.getMotDePasse()));
+            utilisateurResponse = userRepository.save(utilisateur);
+        }
+        return utilisateurResponse;
     }
 
     public Utilisateur deleteUser(Utilisateur utilisateur){

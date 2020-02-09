@@ -1,6 +1,7 @@
 package com.da2i.tricountda2i.service;
 
 import com.da2i.tricountda2i.model.Evenement;
+import com.da2i.tricountda2i.model.Utilisateur;
 import com.da2i.tricountda2i.repository.EventRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,6 +22,11 @@ public class EventService {
     public Evenement getEvenement(Integer id){
 
         return eventRepository.findByIdEvenement(id);
+    }
+
+    public List<Evenement> getEvenementByUser(Utilisateur user){
+
+        return eventRepository.findByUser(user);
     }
 
     public Evenement addEvenement(Evenement evenement){

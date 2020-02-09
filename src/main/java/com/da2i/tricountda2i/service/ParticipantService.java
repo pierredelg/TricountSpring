@@ -1,7 +1,6 @@
 package com.da2i.tricountda2i.service;
 
 import com.da2i.tricountda2i.model.Participant;
-import com.da2i.tricountda2i.model.Utilisateur;
 import com.da2i.tricountda2i.repository.ParticipantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,14 +20,14 @@ public class ParticipantService {
 
     public Participant getParticipant(Integer id){
 
-        return participantRepository.findByIdParticipants(id);
+        return participantRepository.findByIdParticipant(id);
     }
 
     public Participant addParticipant(Participant participant){
 
         Participant lastUser = participantRepository.findLastParticipant();
-        int lastId = lastUser.getIdParticipants();
-        participant.setIdParticipants(++lastId);
+        int lastId = lastUser.getIdParticipant();
+        participant.setIdParticipant(++lastId);
 
         return participantRepository.save(participant);
     }
