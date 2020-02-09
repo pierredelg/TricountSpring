@@ -20,7 +20,7 @@ public class CurrencyController {
     CurrencyService currencyService;
 
     @ApiOperation(value = "Récupere les méthodes permises pour les devises")
-    @RequestMapping(value="/currency", method = RequestMethod.OPTIONS)
+    @RequestMapping(value="/currencies", method = RequestMethod.OPTIONS)
     ResponseEntity<?> collectionOptions()
     {
         return ResponseEntity
@@ -29,7 +29,7 @@ public class CurrencyController {
                 .build();
     }
 
-    @GetMapping("/currency")
+    @GetMapping("/currencies")
     @ApiOperation(value = "Récupére la liste de toutes les devises")
     public ResponseEntity<List<Devise>> getAllCurrency(){
 
@@ -38,7 +38,7 @@ public class CurrencyController {
         return new ResponseEntity<>(devises, HttpStatus.OK);
     }
 
-    @GetMapping(value ="/currency/{id}")
+    @GetMapping(value ="/currencies/{id}")
     @ApiOperation(value = "Récupére une devise à partir de son code")
     public ResponseEntity<Devise> getCurrency(@PathVariable String code){
 
@@ -50,7 +50,7 @@ public class CurrencyController {
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
-    @PostMapping("/currency")
+    @PostMapping("/currencies")
     @ApiOperation(value = "Ajoute une devise")
     public ResponseEntity<Devise> addCurrency(@RequestBody Devise devise){
         if (devise != null){
@@ -60,7 +60,7 @@ public class CurrencyController {
         return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
     }
 
-    @DeleteMapping("/currency")
+    @DeleteMapping("/currencies")
     @ApiOperation(value = "Supprime une devise")
     public ResponseEntity<Devise> deleteCurrency(@RequestBody Devise devise){
         if(devise != null){
@@ -70,7 +70,7 @@ public class CurrencyController {
         return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
     }
 
-    @PutMapping("/currency")
+    @PutMapping("/currencies")
     @ApiOperation(value = "Modifie une devise")
     public ResponseEntity<Devise> updateCurrency(@RequestBody Devise devise){
 

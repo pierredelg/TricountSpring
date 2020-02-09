@@ -26,9 +26,11 @@ public class Participant implements Serializable {
 
 	//Paye des écritures
 	@OneToMany(mappedBy="participant")
+	@JsonIgnore
 	private List<Ecriture> ecrituresPayees;
 
 	@ManyToMany
+	@JsonIgnore
 	@JoinTable(
 			name = "participants_ecritures",
 			joinColumns = @JoinColumn(name = "id_participant"),
@@ -38,9 +40,11 @@ public class Participant implements Serializable {
 
 	//Liste des participations
 	@ManyToMany(mappedBy = "participants")
+	@JsonIgnore
 	private List<Evenement> evenementsParticipes;
 
 	@OneToOne
+	@JsonIgnore
 	private Utilisateur utilisateur;
 
 	public Participant() {

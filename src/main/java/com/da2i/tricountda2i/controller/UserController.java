@@ -54,9 +54,9 @@ public class UserController {
         }
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
-    @GetMapping(value ="/users/{email}")
+    @PostMapping(value ="/users/email")
     @ApiOperation(value = "Récupére un utilisateur avec son email")
-    public ResponseEntity<Utilisateur> getuserByEmail(@PathVariable String email){
+    public ResponseEntity<Utilisateur> getuserByEmail(@RequestBody String email){
 
         Utilisateur utilisateur = userService.getUserByEmail(email);
 

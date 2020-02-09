@@ -27,9 +27,11 @@ public class Evenement implements Serializable {
 	private String titre;
 
 	@OneToMany(mappedBy="evenement")
+	@JsonIgnore
 	private List<Ecriture> ecritures;
 
 	@ManyToMany
+	@JsonIgnore
 	@JoinTable(
 			name = "participants_evenements",
 			joinColumns = @JoinColumn(name = "id_evenement"),
