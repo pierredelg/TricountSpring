@@ -31,7 +31,7 @@ public class Participant implements Serializable {
 	private List<Ecriture> ecrituresPayees;
 
 	@ManyToMany
-	@JsonIgnoreProperties("participants")
+	@JsonIgnore
 	@JoinTable(
 			name = "participants_ecritures",
 			joinColumns = @JoinColumn(name = "id_participant"),

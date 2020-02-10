@@ -47,7 +47,7 @@ public class Ecriture implements Serializable {
 
 	//Liste des personnes pour qui on paye
 	@ManyToMany(mappedBy = "ecrituresAPayer")
-	@JsonIgnoreProperties("ecrituresAPayer")
+	@JsonIgnore
 	private List<Participant> participants;
 
 	@Enumerated(EnumType.STRING)

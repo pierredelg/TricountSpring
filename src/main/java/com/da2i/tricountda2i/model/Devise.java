@@ -33,7 +33,7 @@ public class Devise implements Serializable {
 
 	@ApiModelProperty(notes = "La liste des écritures contenant la devise")
 	@OneToMany(mappedBy="devise")
-	@JsonIgnoreProperties("devise")
+	@JsonIgnore
 	private List<Ecriture> ecritures;
 
 	public Devise() {
