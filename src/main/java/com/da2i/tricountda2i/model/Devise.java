@@ -1,6 +1,7 @@
 package com.da2i.tricountda2i.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -32,7 +33,7 @@ public class Devise implements Serializable {
 
 	@ApiModelProperty(notes = "La liste des écritures contenant la devise")
 	@OneToMany(mappedBy="devise")
-	@JsonIgnore
+	@JsonIgnoreProperties("devise")
 	private List<Ecriture> ecritures;
 
 	public Devise() {

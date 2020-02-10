@@ -1,6 +1,7 @@
 package com.da2i.tricountda2i.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.annotations.ApiModel;
 
 import javax.persistence.*;
@@ -35,7 +36,7 @@ public class Ecriture implements Serializable {
 	private Devise devise;
 
 	@ManyToOne
-	@JsonIgnore
+	@JsonIgnoreProperties("ecritures")
 	@JoinColumn(name = "id_evenement",nullable = false)
 	private Evenement evenement;
 
@@ -46,7 +47,7 @@ public class Ecriture implements Serializable {
 
 	//Liste des personnes pour qui on paye
 	@ManyToMany(mappedBy = "ecrituresAPayer")
-	@JsonIgnore
+	@JsonIgnoreProperties("ecrituresAPayer")
 	private List<Participant> participants;
 
 	@Enumerated(EnumType.STRING)

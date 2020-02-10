@@ -1,6 +1,7 @@
 package com.da2i.tricountda2i.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.annotations.ApiModel;
 
 import javax.persistence.*;
@@ -26,11 +27,11 @@ public class Participant implements Serializable {
 
 	//Paye des écritures
 	@OneToMany(mappedBy="participant")
-	@JsonIgnore
+	@JsonIgnoreProperties("participant")
 	private List<Ecriture> ecrituresPayees;
 
 	@ManyToMany
-	@JsonIgnore
+	@JsonIgnoreProperties("participants")
 	@JoinTable(
 			name = "participants_ecritures",
 			joinColumns = @JoinColumn(name = "id_participant"),
@@ -40,11 +41,11 @@ public class Participant implements Serializable {
 
 	//Liste des participations
 	@ManyToMany(mappedBy = "participants")
-	@JsonIgnore
+	@JsonIgnoreProperties("participants")
 	private List<Evenement> evenementsParticipes;
 
 	@OneToOne
-	@JsonIgnore
+	@JsonIgnoreProperties("participant")
 	private Utilisateur utilisateur;
 
 	public Participant() {
