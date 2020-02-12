@@ -60,14 +60,17 @@ public class EntryController {
         return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
     }
 
-    @DeleteMapping("/entries")
+    @DeleteMapping("/entries/{id}")
     @ApiOperation(value = "Permet de supprimer une écriture")
-    public ResponseEntity<Ecriture> deleteWriting(@RequestBody Ecriture ecriture){
-        if(ecriture != null){
-            entryService.deleteWriting(ecriture);
-            return new ResponseEntity<>(ecriture,HttpStatus.OK);
+    public ResponseEntity<Void> deleteWriting(@PathVariable Integer id){
+        try{
+            entryService.deleteWriting(id);
+        }catch (Exception e){
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+
         }
-        return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(HttpStatus.OK);
+
     }
 
     @PutMapping("/entries")

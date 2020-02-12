@@ -32,10 +32,9 @@ public class EntryService {
         return entryRepository.save(ecriture);
     }
 
-    public Ecriture deleteWriting(Ecriture ecriture){
+    public void deleteWriting(Integer id){
 
-        entryRepository.delete(ecriture);
-        return ecriture;
+        entryRepository.deleteById(Long.valueOf(id));
     }
 
     public Ecriture updateWriting(Ecriture ecriture){

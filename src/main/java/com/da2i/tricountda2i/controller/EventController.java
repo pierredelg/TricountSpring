@@ -79,14 +79,17 @@ public class EventController {
         return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
     }
 
-    @DeleteMapping("/events")
+    @DeleteMapping("/events/{id}")
     @ApiOperation(value = "Supprime un événement")
-    public ResponseEntity<Evenement> deleteEvenement(@RequestBody Evenement evenement){
-        if(evenement != null){
-            eventService.deleteEvenement(evenement);
-            return new ResponseEntity<>(evenement,HttpStatus.OK);
+    public ResponseEntity<Void> deleteEvenement(@PathVariable Integer id){
+
+        try {
+            eventService.deleteEvenement(id);
+        }catch (Exception e){
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
-        return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
+
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @PutMapping("/events")
