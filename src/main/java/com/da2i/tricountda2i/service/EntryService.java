@@ -18,6 +18,10 @@ public class EntryService {
         return (List<Ecriture>) entryRepository.findAll();
     }
 
+    public List<Ecriture> getAllWritingByEventId(Integer id){
+        return entryRepository.findByEvenementId(id);
+    }
+
     public Ecriture getWriting(Integer id){
 
         return entryRepository.findByIdEcriture(id);

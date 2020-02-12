@@ -1,6 +1,8 @@
 package com.da2i.tricountda2i.controller;
 
+import com.da2i.tricountda2i.model.Ecriture;
 import com.da2i.tricountda2i.model.Evenement;
+import com.da2i.tricountda2i.service.EntryService;
 import com.da2i.tricountda2i.service.EventService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -18,6 +20,9 @@ public class EventController {
 
     @Autowired
     EventService eventService;
+
+    @Autowired
+    EntryService entryService;
 
     @ApiOperation(value = "Récupere les méthodes permises pour les événements")
     @RequestMapping(value="/events", method = RequestMethod.OPTIONS)
@@ -46,6 +51,19 @@ public class EventController {
 
         if(evenement != null){
             return new ResponseEntity<>(evenement, HttpStatus.OK);
+        }
+
+        return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+    }
+
+    @GetMapping(value ="/events/{eventId}/entries")
+    @ApiOperation(value = "Récupére les dépenses d'un événement à partir de son id")
+    public ResponseEntity<List<Ecriture>> getEntriesByEvent(@PathVariable Integer eventId){
+
+        List<Ecriture> ecritureList = entryService.getAllWritingByEventId(eventId);
+
+        if(ecritureList != null){
+            return new ResponseEntity<>(ecritureList, HttpStatus.OK);
         }
 
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
