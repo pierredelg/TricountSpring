@@ -6,6 +6,9 @@ target/
 !**/src/main/**
 !**/src/test/**
 package-lock.json
+creer.sql
+detruire.sql
+src/main/resources/application.properties
 
 ### STS ###
 .apt_generated
