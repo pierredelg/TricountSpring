@@ -34,10 +34,8 @@ public class EventService {
         return eventRepository.save(evenement);
     }
 
-    public Evenement deleteEvenement(Evenement evenement){
-
-        eventRepository.delete(evenement);
-        return evenement;
+    public void deleteEvenement(Integer id){
+        eventRepository.deleteById(Long.valueOf(id));
     }
 
     public Evenement updateEvenement(Evenement evenement){

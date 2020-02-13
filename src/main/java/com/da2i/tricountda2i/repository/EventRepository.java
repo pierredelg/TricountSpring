@@ -13,6 +13,9 @@ import java.util.List;
 public interface EventRepository extends CrudRepository<Evenement,Long>{
     Evenement findByIdEvenement(int id);
 
-    @Query("select evenement from Evenement evenement")
+    @Query("select evenement from Evenement evenement join evenement.participants p where p.utilisateur = :utilisateur")
     List<Evenement> findByUser(@Param("utilisateur")Utilisateur utilisateur);
+
+    @Query("delete from Evenement e where e.idEvenement= :idEvenement")
+    Evenement deleteByIdEvenement(@Param("idEvenement") Integer idEvenement);
 }

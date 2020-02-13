@@ -18,6 +18,10 @@ public class EntryService {
         return (List<Ecriture>) entryRepository.findAll();
     }
 
+    public List<Ecriture> getAllWritingByEventId(Integer id){
+        return entryRepository.findByEvenementId(id);
+    }
+
     public Ecriture getWriting(Integer id){
 
         return entryRepository.findByIdEcriture(id);
@@ -28,10 +32,9 @@ public class EntryService {
         return entryRepository.save(ecriture);
     }
 
-    public Ecriture deleteWriting(Ecriture ecriture){
+    public void deleteWriting(Integer id){
 
-        entryRepository.delete(ecriture);
-        return ecriture;
+        entryRepository.deleteById(Long.valueOf(id));
     }
 
     public Ecriture updateWriting(Ecriture ecriture){
