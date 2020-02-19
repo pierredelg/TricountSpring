@@ -11,7 +11,6 @@ import java.util.List;
 
 @Repository
 public interface EventRepository extends CrudRepository<Evenement,Long>{
-    Evenement findByIdEvenement(int id);
 
     @Query("select evenement from Evenement evenement")
     List<Evenement> findByUser(@Param("utilisateur")Utilisateur utilisateur);

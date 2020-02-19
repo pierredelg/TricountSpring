@@ -1,6 +1,8 @@
 package com.da2i.tricountda2i.service;
 
+import com.da2i.tricountda2i.model.Participant;
 import com.da2i.tricountda2i.model.Utilisateur;
+import com.da2i.tricountda2i.repository.ParticipantRepository;
 import com.da2i.tricountda2i.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -13,6 +15,9 @@ public class UserService {
 
     @Autowired
     UserRepository userRepository;
+
+    @Autowired
+    ParticipantRepository participantRepository;
 
     @Autowired
     private PasswordEncoder bcryptEncoder;
@@ -33,7 +38,17 @@ public class UserService {
 
         if(utilisateurBDD == null) {
             utilisateur.setMotDePasse(bcryptEncoder.encode(utilisateur.getMotDePasse()));
+
+            Participant participant = utilisateur.getParticipant();
+
+            participant = participantRepository.save(participant);
+
+            utilisateur.setParticipant(participant);
             utilisateurResponse = userRepository.save(utilisateur);
+
+            participant.setUtilisateur(utilisateur);
+            participantRepository.save(participant);
+
         }
         return utilisateurResponse;
     }

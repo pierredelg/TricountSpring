@@ -38,4 +38,9 @@ public class EntryService {
 
         return entryRepository.save(ecriture);
     }
+
+    public List<Ecriture> getAllWritingByEventId(Long id) {
+
+        return entryRepository.findAllByEventId(id);
+    }
 }
