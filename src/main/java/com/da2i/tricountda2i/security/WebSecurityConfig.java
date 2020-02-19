@@ -57,7 +57,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 //On autorise les requetes options
                 .authorizeRequests().antMatchers(HttpMethod.OPTIONS,"/api/**").permitAll()
                 //On autorise le register et l'authenticate
-                .antMatchers("/api/authenticate","/api/register").permitAll().
+                .antMatchers("/api/authenticate","/api/register","/api/swagger-ui.html/**", "/api/configuration/**", "/api/swagger-resources/**", "/api/v2/api-docs","/api/webjars/**")
+                .permitAll().
                 //On demande une authentification pour les autres requetes
                 anyRequest().authenticated().and().
                 //On enleve les sessions

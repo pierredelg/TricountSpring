@@ -21,4 +21,7 @@ public interface ParticipantRepository extends CrudRepository<Participant,Long> 
 
     @Query("select p from Participant p join p.evenementsParticipes e where e.idEvenement = :id")
     List<Participant> findAllByEventId(@Param("id") Long id);
+
+    @Query("select p from Participant p join p.ecrituresAPayer e where e.idEcriture=:id")
+    List<Participant> findAllByEntryId(@Param("id") Integer id);
 }

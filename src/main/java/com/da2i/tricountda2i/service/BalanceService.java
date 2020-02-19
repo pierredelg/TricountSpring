@@ -5,8 +5,10 @@ import com.da2i.tricountda2i.exceptions.EntryWithoutParticipantException;
 import com.da2i.tricountda2i.model.Ecriture;
 import com.da2i.tricountda2i.model.Evenement;
 import com.da2i.tricountda2i.model.Participant;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.GeneratedValue;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -14,9 +16,14 @@ import java.util.Map;
 @Service
 public class BalanceService {
 
-    public BalanceDTO getBalance(Evenement evenement) throws Exception {
+    @Autowired
+    EventService eventService;
+
+    public BalanceDTO getBalance(Integer evenementId) throws Exception {
 
         BalanceDTO balanceDTO = new BalanceDTO();
+
+        Evenement evenement = eventService.getEvenement(Long.valueOf(evenementId));
 
         //On calcule le montant total de l'évenement
         double montantTotalDepense = evenement.getEcritures().stream().mapToDouble(Ecriture::getMontant).sum();

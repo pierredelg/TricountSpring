@@ -87,6 +87,19 @@ public class EventController {
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
+    @GetMapping(value ="/events/{idevent}/entries/{identry}")
+    @ApiOperation(value = "Récupére une dépense d'un evenement à partir de son id")
+    public ResponseEntity<Ecriture> getEntryByIdByEventId(@PathVariable Long idevent,@PathVariable Integer identry){
+
+
+        Ecriture ecriture = entryService.getEntryByIdByEventId(idevent,identry);
+
+        if(ecriture != null) {
+            return new ResponseEntity<>(ecriture, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+    }
+
     @PostMapping("/events")
     @ApiOperation(value = "Ajoute un événement")
     public ResponseEntity<Evenement> addEvenement(@RequestBody Evenement evenement){
