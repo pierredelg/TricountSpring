@@ -19,9 +19,9 @@ public class EventService {
         return (List<Evenement>)  eventRepository.findAll();
     }
 
-    public Evenement getEvenement(Integer id){
+    public Evenement getEvenement(Long id){
 
-        return eventRepository.findByIdEvenement(id);
+        return eventRepository.findById(id).orElse(null);
     }
 
     public List<Evenement> getEvenementByUser(Utilisateur user){
@@ -34,8 +34,12 @@ public class EventService {
         return eventRepository.save(evenement);
     }
 
-    public void deleteEvenement(Integer id){
-        eventRepository.deleteById(Long.valueOf(id));
+    public boolean deleteEvenement(Long id){
+        if(eventRepository.existsById(id)){
+            eventRepository.deleteById(id);
+            return true;
+        }
+        return false;
     }
 
     public Evenement updateEvenement(Evenement evenement){

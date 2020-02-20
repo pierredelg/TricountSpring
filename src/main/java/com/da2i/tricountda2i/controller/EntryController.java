@@ -1,7 +1,9 @@
 package com.da2i.tricountda2i.controller;
 
 import com.da2i.tricountda2i.model.Ecriture;
+import com.da2i.tricountda2i.model.Participant;
 import com.da2i.tricountda2i.service.EntryService;
+import com.da2i.tricountda2i.service.ParticipantService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,6 +48,18 @@ public class EntryController {
 
         if(ecriture != null){
             return new ResponseEntity<>(ecriture, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+    }
+
+    @GetMapping(value ="/entries/{id}/participants")
+    @ApiOperation(value = "Permet de récupérer une écriture à partir de son id")
+    public ResponseEntity<List<Participant>> getParticipantByEntryId(@PathVariable Integer id){
+
+        List<Participant> participantList = entryService.getParticipantByEntryId(id);
+
+        if(participantList != null && participantList.size() > 0){
+            return new ResponseEntity<>(participantList, HttpStatus.OK);
         }
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }

@@ -1,8 +1,10 @@
 package com.da2i.tricountda2i.controller;
 
 import com.da2i.tricountda2i.model.Evenement;
+import com.da2i.tricountda2i.model.Participant;
 import com.da2i.tricountda2i.model.Utilisateur;
 import com.da2i.tricountda2i.service.EventService;
+import com.da2i.tricountda2i.service.ParticipantService;
 import com.da2i.tricountda2i.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -23,6 +25,9 @@ public class UserController {
 
     @Autowired
     EventService eventService;
+
+    @Autowired
+    ParticipantService participantService;
 
     @ApiOperation(value = "Récupere les méthodes permises pour les utilisateurs inscrits")
     @RequestMapping(value="/users", method = RequestMethod.OPTIONS)
@@ -54,6 +59,19 @@ public class UserController {
         }
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
+
+    @GetMapping(value ="/users/{id}/participant")
+    @ApiOperation(value = "Récupére un utilisateur avec son identifiant")
+    public ResponseEntity<Participant> getParticipantbyUserId(@PathVariable Integer id){
+
+        Participant participant = participantService.getParticipantbyUserId(id);
+
+        if(participant != null){
+            return new ResponseEntity<>(participant, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+    }
+
     @PostMapping(value ="/users/email")
     @ApiOperation(value = "Récupére un utilisateur avec son email")
     public ResponseEntity<Utilisateur> getuserByEmail(@RequestBody String email){

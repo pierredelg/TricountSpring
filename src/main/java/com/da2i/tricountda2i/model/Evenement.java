@@ -20,7 +20,7 @@ public class Evenement implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "evenement_generator")
 	@SequenceGenerator(name="evenement_generator", sequenceName = "evenement_seq", initialValue = 4)
-	private Integer idEvenement;
+	private Long idEvenement;
 
 	private String description;
 
@@ -42,11 +42,11 @@ public class Evenement implements Serializable {
 	public Evenement() {
 	}
 
-	public Integer getIdEvenement() {
+	public Long getIdEvenement() {
 		return this.idEvenement;
 	}
 
-	public void setIdEvenement(Integer idEvenement) {
+	public void setIdEvenement(Long idEvenement) {
 		this.idEvenement = idEvenement;
 	}
 

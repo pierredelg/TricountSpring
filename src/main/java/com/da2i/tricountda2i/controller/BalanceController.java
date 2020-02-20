@@ -30,8 +30,8 @@ public class BalanceController {
     @GetMapping("/equilibre")
     @ApiOperation(value = "Récupere l'equilibre d'un événement")
     public ResponseEntity<BalanceDTO> addCurrency(@RequestBody Evenement evenement) throws Exception {
+        BalanceDTO balanceDTO = null;
         if (evenement != null){
-            BalanceDTO balanceDTO = balanceService.getBalance(evenement);
             return new ResponseEntity<>(balanceDTO, HttpStatus.OK);
         }
         return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);

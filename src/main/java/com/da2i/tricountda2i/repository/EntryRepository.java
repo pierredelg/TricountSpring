@@ -13,6 +13,9 @@ public interface EntryRepository extends CrudRepository<Ecriture,Long> {
 
     Ecriture findByIdEcriture(int id);
 
-    @Query("select ec from Ecriture ec where ec.evenement.idEvenement = :id")
-    List<Ecriture> findByEvenementId(@Param("id") int id);
+    @Query("select e from Ecriture e join e.evenement ev where ev.idEvenement=:id")
+    List<Ecriture> findAllByEventId(@Param("id") Long id);
+
+    @Query("select e from Ecriture e join e.evenement ev where ev.idEvenement = :idevent and e.idEcriture = :identry")
+    Ecriture findByEventIdAndEntryId(@Param("idevent") Long idevent,@Param("identry") Integer identry);
 }

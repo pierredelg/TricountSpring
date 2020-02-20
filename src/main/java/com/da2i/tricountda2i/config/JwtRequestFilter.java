@@ -43,7 +43,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         if(requestTokenHeader != null){
             authorized = true;
         }
-        logger.info(method + " from " + urlRequest + "  / authorization : " + authorized + "  / access-control: " + accessControl);
+        logger.info(method + " from " + urlRequest + "  / authorization : " + authorized);
 
 
         String username = null;

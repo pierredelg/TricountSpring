@@ -41,4 +41,12 @@ public class ParticipantService {
 
         return participantRepository.save(participant);
     }
+
+    public Participant getParticipantbyUserId(Integer id) {
+        return participantRepository.findByUserId(id);
+    }
+
+    public List<Participant> getAllParticipantByEventId(Long id) {
+        return participantRepository.findAllByEventId(id);
+    }
 }
