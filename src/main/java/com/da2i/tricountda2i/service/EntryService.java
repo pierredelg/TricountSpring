@@ -24,7 +24,7 @@ public class EntryService {
     }
 
     public List<Ecriture> getAllWritingByEventId(Integer id){
-        return entryRepository.findByEvenementId(id);
+        return entryRepository.findAllByEventId(Long.valueOf(id));
     }
 
     public Ecriture getWriting(Integer id){
