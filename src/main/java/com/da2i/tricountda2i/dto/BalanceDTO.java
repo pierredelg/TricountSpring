@@ -4,22 +4,20 @@ import com.da2i.tricountda2i.model.Participant;
 import org.springframework.data.util.Pair;
 
 import java.io.Serializable;
-import java.lang.reflect.MalformedParameterizedTypeException;
 import java.util.Map;
 
 public class BalanceDTO implements Serializable {
 
     private double montantTotalPot;
 
-    private Map<Participant,Double> mapMontantDepenseParticipant;
+    private Map<String,Double> mapMontantDepenseParticipant;
 
-    private Map<Participant,Double> mapMontantApayerAuPot;
+    private Map<String,Double> mapMontantApayerAuPot;
 
-    private Map<Pair<Participant,Participant>,Double> mapRempboursement;
+    private Map<Map<String,String>,Double> mapRempboursement;
 
     public BalanceDTO() {
     }
-
     public double getMontantTotalPot() {
         return montantTotalPot;
     }
@@ -28,27 +26,27 @@ public class BalanceDTO implements Serializable {
         this.montantTotalPot = montantTotalPot;
     }
 
-    public Map<Participant, Double> getMapMontantDepenseParticipant() {
+    public Map<String, Double> getMapMontantDepenseParticipant() {
         return mapMontantDepenseParticipant;
     }
 
-    public void setMapMontantDepenseParticipant(Map<Participant, Double> mapMontantDepenseParticipant) {
+    public void setMapMontantDepenseParticipant(Map<String, Double> mapMontantDepenseParticipant) {
         this.mapMontantDepenseParticipant = mapMontantDepenseParticipant;
     }
 
-    public Map<Participant, Double> getMapMontantApayerAuPot() {
+    public Map<String, Double> getMapMontantApayerAuPot() {
         return mapMontantApayerAuPot;
     }
 
-    public void setMapMontantApayerAuPot(Map<Participant, Double> mapMontantApayerAuPot) {
+    public void setMapMontantApayerAuPot(Map<String, Double> mapMontantApayerAuPot) {
         this.mapMontantApayerAuPot = mapMontantApayerAuPot;
     }
 
-    public Map<Pair<Participant,Participant>,Double> getMapRempboursement() {
+    public Map<Map<String, String>, Double> getMapRempboursement() {
         return mapRempboursement;
     }
 
-    public void setMapRempboursement(Map<Pair<Participant,Participant>,Double> mapRempboursement) {
+    public void setMapRempboursement(Map<Map<String, String>, Double> mapRempboursement) {
         this.mapRempboursement = mapRempboursement;
     }
 }
