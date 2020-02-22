@@ -7,6 +7,7 @@ import io.swagger.annotations.ApiModel;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
+import java.util.Objects;
 
 
 /**
@@ -97,5 +98,18 @@ public class Participant implements Serializable {
 
 	public void setEvenementsParticipes(List<Evenement> evenements2) {
 		this.evenementsParticipes = evenements2;
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Participant that = (Participant) o;
+		return idParticipant.equals(that.idParticipant) && Objects.equals(surnom, that.surnom);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(idParticipant, surnom);
 	}
 }

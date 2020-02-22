@@ -1,15 +1,21 @@
 package com.da2i.tricountda2i.dto;
 
 import com.da2i.tricountda2i.model.Participant;
+import org.springframework.data.util.Pair;
 
+import java.io.Serializable;
+import java.lang.reflect.MalformedParameterizedTypeException;
 import java.util.Map;
 
-public class BalanceDTO {
+public class BalanceDTO implements Serializable {
+
     private double montantTotalPot;
+
+    private Map<Participant,Double> mapMontantDepenseParticipant;
 
     private Map<Participant,Double> mapMontantApayerAuPot;
 
-    private Map<Participant,Map<Participant,Double>> mapRempboursement;
+    private Map<Pair<Participant,Participant>,Double> mapRempboursement;
 
     public BalanceDTO() {
     }
@@ -22,6 +28,14 @@ public class BalanceDTO {
         this.montantTotalPot = montantTotalPot;
     }
 
+    public Map<Participant, Double> getMapMontantDepenseParticipant() {
+        return mapMontantDepenseParticipant;
+    }
+
+    public void setMapMontantDepenseParticipant(Map<Participant, Double> mapMontantDepenseParticipant) {
+        this.mapMontantDepenseParticipant = mapMontantDepenseParticipant;
+    }
+
     public Map<Participant, Double> getMapMontantApayerAuPot() {
         return mapMontantApayerAuPot;
     }
@@ -30,11 +44,11 @@ public class BalanceDTO {
         this.mapMontantApayerAuPot = mapMontantApayerAuPot;
     }
 
-    public Map<Participant, Map<Participant, Double>> getMapRempboursement() {
+    public Map<Pair<Participant,Participant>,Double> getMapRempboursement() {
         return mapRempboursement;
     }
 
-    public void setMapRempboursement(Map<Participant, Map<Participant, Double>> mapRempboursement) {
+    public void setMapRempboursement(Map<Pair<Participant,Participant>,Double> mapRempboursement) {
         this.mapRempboursement = mapRempboursement;
     }
 }

@@ -1,8 +1,10 @@
 package com.da2i.tricountda2i.controller;
 
+import com.da2i.tricountda2i.dto.BalanceDTO;
 import com.da2i.tricountda2i.model.Ecriture;
 import com.da2i.tricountda2i.model.Evenement;
 import com.da2i.tricountda2i.model.Participant;
+import com.da2i.tricountda2i.service.BalanceService;
 import com.da2i.tricountda2i.service.EntryService;
 import com.da2i.tricountda2i.service.EventService;
 import com.da2i.tricountda2i.service.ParticipantService;
@@ -28,6 +30,9 @@ public class EventController {
 
     @Autowired
     ParticipantService participantService;
+
+    @Autowired
+    BalanceService balanceService;
 
     @ApiOperation(value = "Récupere les méthodes permises pour les événements")
     @RequestMapping(value="/events", method = RequestMethod.OPTIONS)
@@ -85,6 +90,18 @@ public class EventController {
             return new ResponseEntity<>(participantList, HttpStatus.OK);
         }
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+    }
+
+    @GetMapping(value = "/events/{id}/balance")
+    @ApiOperation(value = "Récupere l'equilibre d'un événement à partir de son id")
+    public ResponseEntity<BalanceDTO> addCurrency(@PathVariable Integer id) throws Exception {
+
+        BalanceDTO balanceDTO = balanceService.getBalance(id);
+
+        if (balanceDTO != null){
+            return new ResponseEntity<>(balanceDTO, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
     }
 
     @GetMapping(value ="/events/{idevent}/entries/{identry}")

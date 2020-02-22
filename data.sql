@@ -4,19 +4,19 @@ insert into devise(code, nom_de_devise, symbole) values ('DOL','Dollars','$');
 insert into devise(code, nom_de_devise, symbole) values ('LIV','Livre sterling','£');
 
 --  PARTICIPANTS
-insert into participant(id_participant,surnom) values (1,'surnom 1');
-insert into participant(id_participant,surnom) values (2,'surnom 2');
-insert into participant(id_participant,surnom) values (3,'surnom 3');
-insert into participant(id_participant,surnom) values (4,'surnom 4');
-insert into participant(id_participant,surnom) values (5,'surnom 5');
+insert into participant(id_participant,surnom) values (1,'Pierre');
+insert into participant(id_participant,surnom) values (2,'Ludo');
+insert into participant(id_participant,surnom) values (3,'Nagi');
+insert into participant(id_participant,surnom) values (4,'Virginie');
+insert into participant(id_participant,surnom) values (5,'Adrien');
 
 
 --  UTILISATEURS
-insert into utilisateur (id_utilisateur, email, mot_de_passe, nom, participant_id_participant) values (1, 'utilisateur1@test.fr', '$2a$10$KXHexAZvD70OqNd278fQ.OcW3IJR7tVe5W0nPfjpfdA90rWH7Erp.', 'Utilisateur 1', 1);
-insert into utilisateur (id_utilisateur, email, mot_de_passe, nom, participant_id_participant) values (2, 'utilisateur2@test.fr', '$2a$10$B03pFyWtBW63h/UrhZhUHuZI3YnamYGD4elDcoQUIbGpOlTfmFFBS', 'Utilisateur 2', 2);
-insert into utilisateur (id_utilisateur, email, mot_de_passe, nom, participant_id_participant) values (3, 'utilisateur3@test.fr', '$2a$10$xavYxYd6F3VAsFrI9dx1BOqyIqf0rHgExtJbLOEAEZkp9E0FBdoKe', 'Utilisateur 3', 3);
-insert into utilisateur (id_utilisateur, email, mot_de_passe, nom, participant_id_participant) values (4, 'utilisateur4@test.fr', '$2a$10$mrMUYpc6hkns2Etv60etDerKYhc1cob94oxbWsSOFrUx7co5uiHTq', 'Utilisateur 4', 4);
-insert into utilisateur (id_utilisateur, email, mot_de_passe, nom, participant_id_participant) values (5, 'utilisateur5@test.fr', '$2a$10$9owWmPGyJrp.dv761xDkzer6JnCAulIHdoBYFRrYmtDr0/jhiCJV.', 'Utilisateur 5', 5);
+insert into utilisateur (id_utilisateur, email, mot_de_passe, nom, participant_id_participant) values (1, 'pierre@tricountda2i.fr', '$2a$10$KXHexAZvD70OqNd278fQ.OcW3IJR7tVe5W0nPfjpfdA90rWH7Erp.', 'Pierre', 1);
+insert into utilisateur (id_utilisateur, email, mot_de_passe, nom, participant_id_participant) values (2, 'ludo@tricountda2i.fr', '$2a$10$B03pFyWtBW63h/UrhZhUHuZI3YnamYGD4elDcoQUIbGpOlTfmFFBS', 'Ludo', 2);
+insert into utilisateur (id_utilisateur, email, mot_de_passe, nom, participant_id_participant) values (3, 'nagi@tricountda2i.fr', '$2a$10$xavYxYd6F3VAsFrI9dx1BOqyIqf0rHgExtJbLOEAEZkp9E0FBdoKe', 'Nagi', 3);
+insert into utilisateur (id_utilisateur, email, mot_de_passe, nom, participant_id_participant) values (4, 'virginie@tricountda2i.fr', '$2a$10$mrMUYpc6hkns2Etv60etDerKYhc1cob94oxbWsSOFrUx7co5uiHTq', 'Virginie', 4);
+insert into utilisateur (id_utilisateur, email, mot_de_passe, nom, participant_id_participant) values (5, 'adrien@tricountda2i.fr', '$2a$10$9owWmPGyJrp.dv761xDkzer6JnCAulIHdoBYFRrYmtDr0/jhiCJV.', 'Adrien', 5);
 
 --On lie les participants aux utilisateurs
 update participant set utilisateur_id_utilisateur = 1 where participant.id_participant = 1;
@@ -27,9 +27,9 @@ update participant set utilisateur_id_utilisateur = 5 where participant.id_parti
 
 
 --  EVENEMENTS
-insert into evenement(id_evenement,description,titre) values (1,'mon evenement','evenement 1');
-insert into evenement(id_evenement,description,titre) values (2,'mon evenement','evenement 2');
-insert into evenement(id_evenement,description,titre) values (3,'mon evenement','evenement 3');
+insert into evenement(id_evenement,description,titre) values (1,'Vacances Japon','Vacances au Japon 2022');
+insert into evenement(id_evenement,description,titre) values (2,'Vacances Portugal','Vacances au Portugal 2020');
+insert into evenement(id_evenement,description,titre) values (3,'Restaurant Samedi','Restaurant de samedi midi');
 
 
 -- LISTE DES PARTICIPANTS AUX EVENEMENTS
@@ -52,30 +52,30 @@ insert into participants_evenements (id_participant,id_evenement) values (1,3);
 
 --  ECRITURES (evenement,payeur,types d'écriture)
         --evenement 1
-insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (1,'2020/01/01','ecriture 1',100,'DEPENSE','EUR',1,1);
-insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (2,'2020/01/01','ecriture 2',100,'DEPENSE','EUR',1,1);
-insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (3,'2020/01/01','ecriture 3',100,'DEPENSE','EUR',1,2);
-insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (4,'2020/01/02','ecriture 4',100,'DEPENSE','EUR',1,2);
-insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (5,'2020/01/02','ecriture 5',100,'DEPENSE','EUR',1,3);
-insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (6,'2020/01/02','ecriture 6',100,'DEPENSE','EUR',1,3);
-insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (7,'2020/01/03','ecriture 7',100,'DEPENSE','EUR',1,4);
-insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (8,'2020/01/03','ecriture 8',100,'DEPENSE','EUR',1,4);
-insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (9,'2020/01/03','ecriture 9',100,'DEPENSE','EUR',1,5);
+insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (1,'2022/01/01','Billets d''avion',1000.35,'DEPENSE','EUR',1,1);
+insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (2,'2022/01/01','Taxi arrivée Tokyo',120,'DEPENSE','EUR',1,1);
+insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (3,'2022/01/01','Visite musée Tokyo',254.51,'DEPENSE','EUR',1,2);
+insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (4,'2022/01/02','Restaurant sushi',206.25,'DEPENSE','EUR',1,2);
+insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (5,'2022/01/02','Bars',112.35,'DEPENSE','EUR',1,3);
+insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (6,'2022/01/02','Courses',148.56,'DEPENSE','EUR',1,3);
+insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (7,'2022/01/03','Souvenirs',59.62,'DEPENSE','EUR',1,4);
+insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (8,'2022/01/03','Location vélo',120,'DEPENSE','EUR',1,4);
+insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (9,'2022/01/03','Taxi départ Tokyo',110.5,'DEPENSE','EUR',1,5);
 
         --evenement 2
-insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (10,'2020/01/01','ecriture 10',10,'DEPENSE','EUR',2,1);
-insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (11,'2020/01/01','ecriture 11',10,'DEPENSE','EUR',2,1);
-insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (12,'2020/01/01','ecriture 12',10,'DEPENSE','EUR',2,1);
-insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (13,'2020/01/01','ecriture 13',10,'DEPENSE','EUR',2,2);
-insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (14,'2020/01/01','ecriture 14',10,'DEPENSE','EUR',2,2);
-insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (15,'2020/01/01','ecriture 15',10,'DEPENSE','EUR',2,2);
-insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (16,'2020/01/01','ecriture 16',10,'DEPENSE','EUR',2,3);
-insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (17,'2020/01/01','ecriture 17',10,'DEPENSE','EUR',2,3);
-insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (18,'2020/01/01','ecriture 18',10,'DEPENSE','EUR',2,3);
+insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (10,'2020/05/01','Billets d''avions',1000,'DEPENSE','EUR',2,1);
+insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (11,'2020/05/01','Taxi arrivée Lisbonne',100,'DEPENSE','EUR',2,1);
+insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (12,'2020/05/02','Location bateau',500,'DEPENSE','EUR',2,1);
+insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (13,'2020/05/02','Restaurant grillades',150,'DEPENSE','EUR',2,2);
+insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (14,'2020/05/02','Bar sur la plage',50,'DEPENSE','EUR',2,2);
+insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (15,'2020/05/03','Glaces',50,'DEPENSE','EUR',2,2);
+insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (16,'2020/05/03','Visite musée Lisbonne',50,'DEPENSE','EUR',2,3);
+insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (17,'2020/05/04','Souvenirs',50,'DEPENSE','EUR',2,3);
+insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (18,'2020/05/05','Taxi retour aéroport',10,'DEPENSE','EUR',2,3);
 
         --evenement 3
-insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (19,'2020/01/01','ecriture 19',20,'DEPENSE','EUR',3,1);
-insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (20,'2020/01/01','ecriture 20',30,'DEPENSE','EUR',3,3);
+insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (19,'2020/02/22','Plats',50,'DEPENSE','EUR',3,1);
+insert into ecriture(id_ecriture,"date",libelle,montant,type_ecriture,code,id_evenement,id_participant) values (20,'2020/02/22','Boissons',20,'DEPENSE','EUR',3,3);
 
 
 -- PARTICPANTS AUX ECRITURES (POUR QUI L'ECRITURE EST FAITE)
