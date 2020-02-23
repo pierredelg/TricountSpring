@@ -1,7 +1,9 @@
 package com.da2i.tricountda2i.service;
 
+import com.da2i.tricountda2i.model.Ecriture;
 import com.da2i.tricountda2i.model.Evenement;
 import com.da2i.tricountda2i.model.Utilisateur;
+import com.da2i.tricountda2i.repository.EntryRepository;
 import com.da2i.tricountda2i.repository.EventRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,6 +15,9 @@ public class EventService {
 
     @Autowired
     EventRepository eventRepository;
+
+    @Autowired
+    EntryRepository entryRepository;
 
     public List<Evenement> getAllEvenement(){
 
@@ -36,6 +41,11 @@ public class EventService {
 
     public boolean deleteEvenement(Long id){
         if(eventRepository.existsById(id)){
+            eventRepository.findById(id).ifPresent(
+                    evenement -> evenement.getEcritures().forEach(
+                            ecriture -> entryRepository.delete(ecriture)
+                    )
+            );
             eventRepository.deleteById(id);
             return true;
         }
