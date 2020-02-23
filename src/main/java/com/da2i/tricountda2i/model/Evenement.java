@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiModel;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -28,7 +29,7 @@ public class Evenement implements Serializable {
 
 	@OneToMany(mappedBy="evenement")
 	@JsonIgnore
-	private List<Ecriture> ecritures;
+	private List<Ecriture> ecritures = new ArrayList<>();
 
 	@ManyToMany
 	@JsonIgnore
@@ -37,7 +38,7 @@ public class Evenement implements Serializable {
 			joinColumns = @JoinColumn(name = "id_evenement"),
 			inverseJoinColumns = @JoinColumn(name = "id_participant")
 	)
-	private List<Participant> participants;
+	private List<Participant> participants = new ArrayList<>();
 
 	public Evenement() {
 	}

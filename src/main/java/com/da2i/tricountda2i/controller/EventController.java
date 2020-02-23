@@ -1,6 +1,7 @@
 package com.da2i.tricountda2i.controller;
 
 import com.da2i.tricountda2i.dto.BalanceDTO;
+import com.da2i.tricountda2i.dto.EvenementDTO;
 import com.da2i.tricountda2i.model.Ecriture;
 import com.da2i.tricountda2i.model.Evenement;
 import com.da2i.tricountda2i.model.Participant;
@@ -16,6 +17,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -101,7 +103,7 @@ public class EventController {
         if (balanceDTO != null){
             return new ResponseEntity<>(balanceDTO, HttpStatus.OK);
         }
-        return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(null,HttpStatus.NOT_FOUND);
     }
 
     @GetMapping(value ="/events/{idevent}/entries/{identry}")
@@ -119,10 +121,14 @@ public class EventController {
 
     @PostMapping("/events")
     @ApiOperation(value = "Ajoute un événement")
-    public ResponseEntity<Evenement> addEvenement(@RequestBody Evenement evenement){
-        if (evenement != null){
-            eventService.addEvenement(evenement);
-            return new ResponseEntity<>(evenement,HttpStatus.CREATED);
+    public ResponseEntity<EvenementDTO> addEvenement(@RequestBody EvenementDTO evenementDTO){
+
+        if (evenementDTO != null){
+            for(Participant participant : evenementDTO.getParticipants()){
+                participant = participantService.addParticipant(participant);
+            }
+            eventService.addEvenement(evenementDTO);
+            return new ResponseEntity<>(evenementDTO,HttpStatus.CREATED);
         }
         return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
     }

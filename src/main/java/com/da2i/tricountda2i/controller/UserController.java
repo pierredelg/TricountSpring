@@ -60,7 +60,7 @@ public class UserController {
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
-    @GetMapping(value ="/users/{id}/participant")
+    @GetMapping(value ="/users/{id}/participants")
     @ApiOperation(value = "Récupére un utilisateur avec son identifiant")
     public ResponseEntity<Participant> getParticipantbyUserId(@PathVariable Integer id){
 

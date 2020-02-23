@@ -1,5 +1,6 @@
 package com.da2i.tricountda2i.service;
 
+import com.da2i.tricountda2i.dto.EvenementDTO;
 import com.da2i.tricountda2i.model.Ecriture;
 import com.da2i.tricountda2i.model.Evenement;
 import com.da2i.tricountda2i.model.Utilisateur;
@@ -34,7 +35,12 @@ public class EventService {
         return eventRepository.findByUser(user);
     }
 
-    public Evenement addEvenement(Evenement evenement){
+    public Evenement addEvenement(EvenementDTO evenementDTO){
+
+        Evenement evenement = new Evenement();
+        evenement.setDescription(evenementDTO.getDescription());
+        evenement.setTitre(evenementDTO.getTitre());
+        evenement.setParticipants(evenementDTO.getParticipants());
 
         return eventRepository.save(evenement);
     }

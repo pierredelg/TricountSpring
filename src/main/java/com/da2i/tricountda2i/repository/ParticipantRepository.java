@@ -7,13 +7,14 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.NamedQuery;
 import java.util.List;
 
 @Repository
 public interface ParticipantRepository extends CrudRepository<Participant,Long> {
     Participant findByIdParticipant(int id);
 
-    @Query("select p from Participant p order by p.idParticipant desc")
+    @Query(value = "SELECT * FROM participant p ORDER BY p.id_participant DESC LIMIT 1",nativeQuery = true)
     Participant findLastParticipant();
 
     @Query("select p from Participant p  join p.utilisateur u where u.idUtilisateur = :id")
