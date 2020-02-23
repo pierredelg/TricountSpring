@@ -1,7 +1,6 @@
 package com.da2i.tricountda2i.dto;
 
-import com.da2i.tricountda2i.model.Participant;
-import org.springframework.data.util.Pair;
+import com.da2i.tricountda2i.model.Devise;
 
 import java.io.Serializable;
 import java.util.Map;
@@ -9,6 +8,8 @@ import java.util.Map;
 public class BalanceDTO implements Serializable {
 
     private double montantTotalPot;
+
+    private Devise devise;
 
     private Map<String,Double> mapMontantDepenseParticipant;
 
@@ -24,6 +25,14 @@ public class BalanceDTO implements Serializable {
 
     public void setMontantTotalPot(double montantTotalPot) {
         this.montantTotalPot = montantTotalPot;
+    }
+
+    public Devise getDevise() {
+        return devise;
+    }
+
+    public void setDevise(Devise devise) {
+        this.devise = devise;
     }
 
     public Map<String, Double> getMapMontantDepenseParticipant() {

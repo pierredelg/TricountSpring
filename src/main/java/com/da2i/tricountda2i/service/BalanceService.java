@@ -24,22 +24,31 @@ public class BalanceService {
 
     public BalanceDTO getBalance(Integer evenementId) throws Exception {
 
-        BalanceDTO balanceDTO = new BalanceDTO();
+        BalanceDTO balanceDTO = null;
 
         this.evenement = eventService.getEvenement(Long.valueOf(evenementId));
 
-        //On calcule le montant total de l'évenement
-        double montantTotalDepense = evenement.getEcritures().stream().mapToDouble(Ecriture::getMontant).sum();
-        balanceDTO.setMontantTotalPot(montantTotalDepense);
+        if(evenement != null && evenement.getEcritures() != null && evenement.getEcritures().size() > 0) {
 
-        //On crée la map de remboursement au pot commun
-        mapRemboursementPot = creationMapRemboursementAuPot();
-        balanceDTO.setMapMontantApayerAuPot(mapRemboursementPot);
+            balanceDTO = new BalanceDTO();
 
-        //On crée une map contenant les remboursements entre chaques participants
-        Map<Map<String,String>,Double> mapRemboursementEntreChaqueParticipant = creationMapRemboursementEntreChaqueParticipant();
-        balanceDTO.setMapRempboursement(mapRemboursementEntreChaqueParticipant);
+            //On calcule le montant total de l'évenement
+            double montantTotalDepense = evenement.getEcritures().stream().mapToDouble(Ecriture::getMontant).sum();
+            balanceDTO.setMontantTotalPot(montantTotalDepense);
 
+            balanceDTO.setDevise(evenement.getEcritures().get(0).getDevise());
+
+            Map<String, Double> mapDepenseParticipant = creationMapDesMontantsTotauxDepensesParParticipant();
+            balanceDTO.setMapMontantDepenseParticipant(mapDepenseParticipant);
+
+            //On crée la map de remboursement au pot commun
+            mapRemboursementPot = creationMapRemboursementAuPot();
+            balanceDTO.setMapMontantApayerAuPot(mapRemboursementPot);
+
+            //On crée une map contenant les remboursements entre chaques participants
+            Map<Map<String, String>, Double> mapRemboursementEntreChaqueParticipant = creationMapRemboursementEntreChaqueParticipant();
+            balanceDTO.setMapRempboursement(mapRemboursementEntreChaqueParticipant);
+        }
         return balanceDTO;
     }
 
@@ -86,7 +95,7 @@ public class BalanceService {
             //Pour chaque participant de la liste on ajoute ce montant individuel
             for(Participant participant : ecriture.getParticipants()){
                 double montantRemboursement = (mapRemboursementPot.get(participant.getSurnom()) + montantIndiv);
-                montantRemboursement = Math.round(montantRemboursement * 1000.0)/1000.0;
+                montantRemboursement = Math.round(montantRemboursement * 100.0)/100.0;
                 mapRemboursementPot.put(participant.getSurnom(),montantRemboursement);
             }
         }
