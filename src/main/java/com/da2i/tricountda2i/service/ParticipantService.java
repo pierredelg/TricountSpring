@@ -25,11 +25,14 @@ public class ParticipantService {
 
     public Participant addParticipant(Participant participant){
 
-        Participant lastUser = participantRepository.findLastParticipant();
-        int lastId = lastUser.getIdParticipant();
-        participant.setIdParticipant(++lastId);
+        if(participant.getIdParticipant() == null) {
+            Participant lastUser = participantRepository.findLastParticipant();
+            int lastId = lastUser.getIdParticipant();
+            participant.setIdParticipant(++lastId);
 
-        return participantRepository.save(participant);
+            return participantRepository.save(participant);
+        }
+        return participant;
     }
 
     public Participant deleteParticipant(Participant participant){
