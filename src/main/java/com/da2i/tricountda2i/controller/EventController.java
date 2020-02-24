@@ -2,6 +2,7 @@ package com.da2i.tricountda2i.controller;
 
 import com.da2i.tricountda2i.dto.BalanceDTO;
 import com.da2i.tricountda2i.dto.EvenementDTO;
+import com.da2i.tricountda2i.dto.ParticipantDTO;
 import com.da2i.tricountda2i.model.Ecriture;
 import com.da2i.tricountda2i.model.Evenement;
 import com.da2i.tricountda2i.model.Participant;
@@ -124,8 +125,8 @@ public class EventController {
     public ResponseEntity<EvenementDTO> addEvenement(@RequestBody EvenementDTO evenementDTO){
 
         if (evenementDTO != null){
-            for(Participant participant : evenementDTO.getParticipants()){
-                participant = participantService.addParticipant(participant);
+            for(ParticipantDTO participantDTO : evenementDTO.getParticipants()){
+                Participant participant = participantService.addParticipant(participantDTO);
             }
             eventService.addEvenement(evenementDTO);
             return new ResponseEntity<>(evenementDTO,HttpStatus.CREATED);

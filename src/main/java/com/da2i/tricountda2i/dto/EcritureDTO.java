@@ -34,7 +34,7 @@ public class EcritureDTO implements Serializable {
 	private String participant;
 
 	//Liste des personnes pour qui on paye
-	private List<Participant> participants;
+	private List<ParticipantDTO> participants;
 
 
 	public EcritureDTO() {
@@ -104,11 +104,11 @@ public class EcritureDTO implements Serializable {
 		this.typeEcriture = typeEcriture;
 	}
 
-	public List<Participant> getParticipants() {
+	public List<ParticipantDTO> getParticipants() {
 		return this.participants;
 	}
 
-	public void setParticipants(List<Participant> participants) {
+	public void setParticipants(List<ParticipantDTO> participants) {
 		this.participants = participants;
 	}
 

@@ -1,6 +1,7 @@
 package com.da2i.tricountda2i.service;
 
 import com.da2i.tricountda2i.dto.EcritureDTO;
+import com.da2i.tricountda2i.dto.ParticipantDTO;
 import com.da2i.tricountda2i.model.Ecriture;
 import com.da2i.tricountda2i.model.Evenement;
 import com.da2i.tricountda2i.model.Participant;
@@ -49,7 +50,12 @@ public class EntryService {
         ecriture.setDate(ecritureDTO.getDate());
         ecriture.setMontant(ecritureDTO.getMontant());
         ecriture.setLibelle(ecritureDTO.getLibelle());
-        ecriture.setParticipants(ecritureDTO.getParticipants());
+        List<Participant> participantList = new ArrayList<>();
+        for (ParticipantDTO participantDTO : ecritureDTO.getParticipants()){
+            Participant participant = participantRepository.findBySurnom(participantDTO.getSurnom());
+            participantList.add(participant);
+        }
+        ecriture.setParticipants(participantList);
         ecriture.setTypeEcriture(ecritureDTO.getTypeEcriture());
         ecriture.setEvenement(ecritureDTO.getEvenement());
 

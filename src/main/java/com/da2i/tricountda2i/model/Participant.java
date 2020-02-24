@@ -3,9 +3,12 @@ package com.da2i.tricountda2i.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.annotations.ApiModel;
+import org.hibernate.validator.constraints.UniqueElements;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,12 +27,13 @@ public class Participant implements Serializable {
 	@SequenceGenerator(name="participant_generator", sequenceName = "participant_seq", initialValue = 6)
 	private Integer idParticipant;
 
+	@NotNull
 	private String surnom;
 
 	//Paye des écritures
 	@OneToMany(mappedBy="participant")
 	@JsonIgnoreProperties("participant")
-	private List<Ecriture> ecrituresPayees;
+	private List<Ecriture> ecrituresPayees = new ArrayList<>();
 
 	@ManyToMany
 	@JsonIgnore
@@ -38,12 +42,12 @@ public class Participant implements Serializable {
 			joinColumns = @JoinColumn(name = "id_participant"),
 			inverseJoinColumns = @JoinColumn(name = "id_ecriture")
 	)
-	private List<Ecriture> ecrituresAPayer;
+	private List<Ecriture> ecrituresAPayer = new ArrayList<>();
 
 	//Liste des participations
 	@ManyToMany(mappedBy = "participants")
 	@JsonIgnoreProperties("participants")
-	private List<Evenement> evenementsParticipes;
+	private List<Evenement> evenementsParticipes = new ArrayList<>();
 
 	@OneToOne
 	@JsonIgnoreProperties("participant")
