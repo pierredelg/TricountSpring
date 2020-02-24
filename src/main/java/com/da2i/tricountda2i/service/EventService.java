@@ -70,7 +70,19 @@ public class EventService {
         if(eventRepository.existsById(id)){
             eventRepository.findById(id).ifPresent(
                     evenement -> evenement.getEcritures().forEach(
-                            ecriture -> entryRepository.delete(ecriture)
+                            ecriture -> {
+                                if(ecriture != null) {
+                                    List<Participant> participants = ecriture.getParticipants();
+                                    participants.forEach(participant -> {
+                                        participant.getEcrituresAPayer().remove(ecriture);
+                                        participantRepository.save(participant);
+                                    });
+                                    Participant participant = ecriture.getParticipant();
+                                    participant.getEcrituresPayees().remove(ecriture);
+                                    participantRepository.save(participant);
+                                    entryRepository.delete(ecriture);
+                                }
+                            }
                     )
             );
             eventRepository.deleteById(id);

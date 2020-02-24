@@ -111,13 +111,24 @@ public class EventController {
     @ApiOperation(value = "Récupére une dépense d'un evenement à partir de son id")
     public ResponseEntity<Ecriture> getEntryByIdByEventId(@PathVariable Long idevent,@PathVariable Integer identry){
 
-
         Ecriture ecriture = entryService.getEntryByIdByEventId(idevent,identry);
 
         if(ecriture != null) {
             return new ResponseEntity<>(ecriture, HttpStatus.OK);
         }
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+    }
+
+    @DeleteMapping(value ="/events/{idevent}/entries/{identry}")
+    @ApiOperation(value = "Supprime une dépense d'un evenement à partir de son id")
+    public ResponseEntity<Void> deleteEntryByIdByEventId(@PathVariable Long idevent,@PathVariable Integer identry){
+
+        Ecriture ecriture = entryService.deleteEntryByIdByEventId(idevent,identry);
+
+        if(ecriture != null) {
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
     @PostMapping("/events")
