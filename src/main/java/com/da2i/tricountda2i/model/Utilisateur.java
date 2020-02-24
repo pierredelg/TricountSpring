@@ -3,6 +3,7 @@ package com.da2i.tricountda2i.model;
 import io.swagger.annotations.ApiModel;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 
@@ -20,10 +21,13 @@ public class Utilisateur implements Serializable {
 	@SequenceGenerator(name="utilisateur_generator", sequenceName = "utilisateur_seq", initialValue = 6)
 	private Integer idUtilisateur;
 
+	@NotNull
 	private String nom;
 
+	@NotNull
 	private String email;
 
+	@NotNull
 	private String motDePasse;
 
 	@OneToOne
