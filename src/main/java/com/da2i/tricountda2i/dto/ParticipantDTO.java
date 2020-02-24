@@ -1,5 +1,6 @@
 package com.da2i.tricountda2i.dto;
 
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -9,6 +10,7 @@ public class ParticipantDTO implements Serializable {
 
 	private Integer idParticipant;
 
+	@NotNull
 	private String surnom;
 
 	public ParticipantDTO() {

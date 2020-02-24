@@ -4,6 +4,7 @@ import com.da2i.tricountda2i.config.JwtTokenUtil;
 import com.da2i.tricountda2i.model.Utilisateur;
 import com.da2i.tricountda2i.security.JwtRequest;
 import com.da2i.tricountda2i.security.JwtResponse;
+import com.da2i.tricountda2i.service.EmailService;
 import com.da2i.tricountda2i.service.JwtUserDetailsService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,9 @@ public class JwtAuthenticationController {
 
     @Autowired
     private JwtUserDetailsService userDetailsService;
+
+    @Autowired
+    EmailService emailService;
 
     @ApiOperation(value = "Récupere les méthodes permises pour l'authentification")
     @RequestMapping(value="/authenticate", method = RequestMethod.OPTIONS)
@@ -78,7 +82,7 @@ public class JwtAuthenticationController {
     @PostMapping(value = "/register")
     public ResponseEntity<?> saveUser(@RequestBody Utilisateur user) {
         Utilisateur utilisateur = userDetailsService.save(user);
-
+        emailService.sendWelcomeEmail(user);
         if(utilisateur != null) {
             return ResponseEntity.ok(utilisateur);
         }else {

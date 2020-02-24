@@ -107,4 +107,22 @@ public class EntryService {
     public List<Participant> getParticipantByEntryId(Integer id) {
         return participantRepository.findAllByEntryId(id);
     }
+
+    public Ecriture deleteEntryByIdByEventId(Long idevent, Integer identry) {
+        Ecriture ecriture = entryRepository.findByEventIdAndEntryId(idevent, identry);
+
+        if(ecriture != null) {
+            Participant participantPayeur = ecriture.getParticipant();
+            participantPayeur.getEcrituresPayees().remove(ecriture);
+            participantRepository.save(participantPayeur);
+
+            List<Participant> participants = ecriture.getParticipants();
+            participants.forEach(participant -> {
+                participant.getEcrituresAPayer().remove(ecriture);
+                participantRepository.save(participant);
+            });
+            entryRepository.delete(ecriture);
+        }
+        return ecriture;
+    }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import io.swagger.annotations.ApiModel;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
@@ -18,22 +19,30 @@ public class EcritureDTO implements Serializable {
 
 	private Integer idEcriture;
 
+	@NotNull
 	private Date date;
 
+	@NotNull
 	private String libelle;
 
+	@NotNull
 	private Double montant;
 
+	@NotNull
 	private String devise;
 
+	@NotNull
 	private Evenement evenement;
 
+	@NotNull
 	private TypeEcriture typeEcriture;
 
 	//Payeur
+	@NotNull
 	private String participant;
 
 	//Liste des personnes pour qui on paye
+	@NotNull
 	private List<ParticipantDTO> participants;
 
 
