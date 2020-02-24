@@ -30,7 +30,7 @@ public class ParticipantController {
                 .build();
     }
 
-    @GetMapping("/participants")
+    @GetMapping("/public/participants")
     @ApiOperation(value = "Récupére la liste de tous les participants")
     public ResponseEntity<List<Participant>> getAllParticipant(){
 

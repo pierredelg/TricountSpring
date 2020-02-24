@@ -12,6 +12,7 @@ import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
 
+import javax.mail.AuthenticationFailedException;
 import javax.mail.internet.MimeMessage;
 import java.util.HashMap;
 import java.util.Map;
@@ -50,7 +51,11 @@ public class EmailService {
         }catch (Exception e){
             logger.error("ENVOI EMAIL IMPOSSIBLE : ADRESSE= "+ utilisateur.getEmail());
         }
-        sender.send(message);
-        logger.info("ENVOI EMAIL: ADRESSE= "+ utilisateur.getEmail());
+        try {
+            sender.send(message);
+            logger.info("ENVOI EMAIL: ADRESSE= "+ utilisateur.getEmail());
+        }catch (Exception e){
+            logger.info("ENVOI EMAIL IMPOSSIBLE : ADRESSE= "+ utilisateur.getEmail());
+        }
     }
 }
