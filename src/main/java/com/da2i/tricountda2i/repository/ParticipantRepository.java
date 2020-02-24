@@ -12,6 +12,9 @@ import java.util.List;
 
 @Repository
 public interface ParticipantRepository extends CrudRepository<Participant,Long> {
+
+    Participant findBySurnom(String surnom);
+
     Participant findByIdParticipant(int id);
 
     @Query(value = "SELECT * FROM participant p ORDER BY p.id_participant DESC LIMIT 1",nativeQuery = true)

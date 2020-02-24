@@ -1,8 +1,13 @@
 package com.da2i.tricountda2i.service;
 
+import com.da2i.tricountda2i.dto.EcritureDTO;
+import com.da2i.tricountda2i.dto.ParticipantDTO;
 import com.da2i.tricountda2i.model.Ecriture;
+import com.da2i.tricountda2i.model.Evenement;
 import com.da2i.tricountda2i.model.Participant;
+import com.da2i.tricountda2i.repository.CurrencyRepository;
 import com.da2i.tricountda2i.repository.EntryRepository;
+import com.da2i.tricountda2i.repository.EventRepository;
 import com.da2i.tricountda2i.repository.ParticipantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,6 +24,12 @@ public class EntryService {
     @Autowired
     ParticipantRepository participantRepository;
 
+    @Autowired
+    CurrencyRepository currencyRepository;
+
+    @Autowired
+    EventRepository eventRepository;
+
     public List<Ecriture> getAllWriting(){
 
         return (List<Ecriture>) entryRepository.findAll();
@@ -33,9 +44,45 @@ public class EntryService {
         return entryRepository.findByIdEcriture(id);
     }
 
-    public Ecriture addWriting(Ecriture ecriture){
+    public Ecriture addWriting(EcritureDTO ecritureDTO){
+        Ecriture ecriture = new Ecriture();
 
-        return entryRepository.save(ecriture);
+        ecriture.setDate(ecritureDTO.getDate());
+        ecriture.setMontant(ecritureDTO.getMontant());
+        ecriture.setLibelle(ecritureDTO.getLibelle());
+        List<Participant> participantList = new ArrayList<>();
+        for (ParticipantDTO participantDTO : ecritureDTO.getParticipants()){
+            Participant participant = participantRepository.findBySurnom(participantDTO.getSurnom());
+            participantList.add(participant);
+        }
+        ecriture.setParticipants(participantList);
+        ecriture.setTypeEcriture(ecritureDTO.getTypeEcriture());
+        ecriture.setEvenement(ecritureDTO.getEvenement());
+
+        ecriture.setDevise(currencyRepository.findByCode(ecritureDTO.getDevise()));
+
+        Evenement evenement = eventRepository.findById(ecritureDTO.getEvenement().getIdEvenement()).orElse(null);
+        final Participant[] participantPayeur = {null};
+        if(evenement != null) {
+            evenement.getParticipants().forEach(participantFromEvent -> {
+                if (participantFromEvent.getSurnom().equals(ecritureDTO.getParticipant())){
+                    participantPayeur[0] = participantFromEvent;
+                }
+            });
+            ecriture.setParticipant(participantPayeur[0]);
+        }
+        ecriture.getParticipant().getEcrituresPayees().add(ecriture);
+        participantRepository.save(ecriture.getParticipant());
+
+        ecriture = entryRepository.save(ecriture);
+        for (Participant participant: ecriture.getParticipants()){
+            participant = participantRepository.findBySurnom(participant.getSurnom());
+            participant.getEcrituresAPayer().add(ecriture);
+            participant.getEvenementsParticipes().add(ecriture.getEvenement());
+            participant = participantRepository.save(participant);
+        }
+
+        return ecriture;
     }
 
     public void deleteWriting(Integer id){

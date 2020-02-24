@@ -14,7 +14,7 @@ public class EvenementDTO implements Serializable {
 
 	private String titre;
 
-	private List<Participant> participants;
+	private List<ParticipantDTO> participants;
 
 	public EvenementDTO() {
 	}
@@ -43,11 +43,11 @@ public class EvenementDTO implements Serializable {
 		this.titre = titre;
 	}
 
-	public List<Participant> getParticipants() {
+	public List<ParticipantDTO> getParticipants() {
 		return this.participants;
 	}
 
-	public void setParticipants(List<Participant> participants) {
+	public void setParticipants(List<ParticipantDTO> participants) {
 		this.participants = participants;
 	}
 

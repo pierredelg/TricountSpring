@@ -1,5 +1,6 @@
 package com.da2i.tricountda2i.controller;
 
+import com.da2i.tricountda2i.dto.EcritureDTO;
 import com.da2i.tricountda2i.model.Ecriture;
 import com.da2i.tricountda2i.model.Participant;
 import com.da2i.tricountda2i.service.EntryService;
@@ -66,10 +67,10 @@ public class EntryController {
 
     @PostMapping("/entries")
     @ApiOperation(value = "Permet d'ajouter une écriture")
-    public ResponseEntity<Ecriture> addWriting(@RequestBody Ecriture ecriture){
-        if (ecriture != null){
-            entryService.addWriting(ecriture);
-            return new ResponseEntity<>(ecriture,HttpStatus.CREATED);
+    public ResponseEntity<EcritureDTO> addWriting(@RequestBody EcritureDTO ecritureDTO){
+        if (ecritureDTO != null){
+            entryService.addWriting(ecritureDTO);
+            return new ResponseEntity<>(ecritureDTO,HttpStatus.CREATED);
         }
         return new ResponseEntity<>(null,HttpStatus.BAD_REQUEST);
     }

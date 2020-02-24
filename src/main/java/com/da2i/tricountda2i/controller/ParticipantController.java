@@ -1,5 +1,6 @@
 package com.da2i.tricountda2i.controller;
 
+import com.da2i.tricountda2i.dto.ParticipantDTO;
 import com.da2i.tricountda2i.model.Participant;
 import com.da2i.tricountda2i.service.ParticipantService;
 import io.swagger.annotations.Api;
@@ -55,7 +56,7 @@ public class ParticipantController {
 
     @PostMapping("/participants")
     @ApiOperation(value = "Ajoute un participant")
-    public ResponseEntity<Participant> addParticipant(@RequestBody Participant participant){
+    public ResponseEntity<ParticipantDTO> addParticipant(@RequestBody ParticipantDTO participant){
         if (participant != null){
             participantService.addParticipant(participant);
             return new ResponseEntity<>(participant,HttpStatus.CREATED);
