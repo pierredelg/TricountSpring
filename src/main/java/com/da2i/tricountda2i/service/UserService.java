@@ -33,10 +33,15 @@ public class UserService {
 
     public Utilisateur addUser(Utilisateur utilisateur){
 
+        String surnom = null;
+        if (utilisateur.getParticipant() != null){
+            surnom = utilisateur.getParticipant().getSurnom();
+        }
+
         Utilisateur utilisateurResponse = null;
         Utilisateur utilisateurBDD = userRepository.findByEmail(utilisateur.getEmail());
 
-        if(utilisateurBDD == null) {
+        if(participantRepository.findBySurnom(surnom) != null && utilisateurBDD == null) {
             utilisateur.setMotDePasse(bcryptEncoder.encode(utilisateur.getMotDePasse()));
 
             Participant participant = utilisateur.getParticipant();

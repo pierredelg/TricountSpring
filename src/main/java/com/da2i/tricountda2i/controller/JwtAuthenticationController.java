@@ -86,7 +86,7 @@ public class JwtAuthenticationController {
         if(utilisateur != null) {
             return ResponseEntity.ok(utilisateur);
         }else {
-            return new ResponseEntity<>("L'email \"" + user.getEmail() + "\" est dejà enregistré", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>("Impossible d'enregistrer cet utilisateur", HttpStatus.BAD_REQUEST);
         }
     }
 }
