@@ -1,7 +1,7 @@
 --  DEVISES
 insert into devise(code, nom_de_devise, symbole) values ('EUR','Euros','€');
-insert into devise(code, nom_de_devise, symbole) values ('DOL','Dollars','$');
-insert into devise(code, nom_de_devise, symbole) values ('LIV','Livre sterling','£');
+-- insert into devise(code, nom_de_devise, symbole) values ('DOL','Dollars','$');
+-- insert into devise(code, nom_de_devise, symbole) values ('LIV','Livre sterling','£');
 
 --  PARTICIPANTS
 insert into participant(id_participant,surnom) values (1,'Pierre');
