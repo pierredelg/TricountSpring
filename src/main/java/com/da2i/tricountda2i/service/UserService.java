@@ -41,7 +41,7 @@ public class UserService {
         Utilisateur utilisateurResponse = null;
         Utilisateur utilisateurBDD = userRepository.findByEmail(utilisateur.getEmail());
 
-        if(participantRepository.findBySurnom(surnom) != null && utilisateurBDD == null) {
+        if(participantRepository.findBySurnom(surnom) == null && utilisateurBDD == null) {
             utilisateur.setMotDePasse(bcryptEncoder.encode(utilisateur.getMotDePasse()));
 
             Participant participant = utilisateur.getParticipant();

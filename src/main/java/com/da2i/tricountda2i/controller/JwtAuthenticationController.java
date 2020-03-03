@@ -82,8 +82,8 @@ public class JwtAuthenticationController {
     @PostMapping(value = "/register")
     public ResponseEntity<?> saveUser(@RequestBody Utilisateur user) {
         Utilisateur utilisateur = userDetailsService.save(user);
-        emailService.sendWelcomeEmail(user);
         if(utilisateur != null) {
+            emailService.sendWelcomeEmail(user);
             return ResponseEntity.ok(utilisateur);
         }else {
             return new ResponseEntity<>("Impossible d'enregistrer cet utilisateur", HttpStatus.BAD_REQUEST);
