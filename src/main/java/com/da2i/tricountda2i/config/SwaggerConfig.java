@@ -39,7 +39,7 @@ public class SwaggerConfig {
                 .version("1.0.0")
                 .license("Apache License Version 2.0")
                 .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0.html")
-                .contact(new Contact("Pierre Delgrange", "", "pierre.delgrange.etu@univ-lille.fr"))
+                .contact(new Contact("Pierre Delgrange & Nagi Karaouzene", "", "pierre.delgrange.etu@univ-lille.fr"))
                 .build();
     }
 
